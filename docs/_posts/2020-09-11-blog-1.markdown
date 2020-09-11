@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2020/09/11 Blog 0"
+title:  "2020/09/11 Blog 1"
 date:   2020-09-11 4:00 -0700
 categories: Senior-Design
 ---
