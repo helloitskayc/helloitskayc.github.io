@@ -4,5 +4,6 @@ title:  "2020/09/11 Blog 1"
 date:   2020-09-11 4:00 -0700
 categories: Senior-Design
 ---
-<h1>hello</h1>
-<p><strong>yeoeyooeyo</strong></p>
+In CIT 384, we learned a lot of different types of HTML tags to further assist the developer in creating a more semantic structure to format the page for greater accessibility. By having a more consistent, semantic structure, the website will prove to be more effective in illustrating the content on each page. The ones I will be talking about for this blog will be described below, called <strong>sectioning elements</strong>. The sectioning element tags we utilized for our labs were <i>header, main, nav, section, aside,</i> and <i>footer</i> to allow authors to identify commonality across the different pages. 
+
+The 
