@@ -6,14 +6,18 @@ categories: Senior-Design
 ---
 <p>In CIT 384, we learned a lot of different types of HTML tags to further assist the developer in creating a more semantic structure to format the page for greater accessibility. By having a more consistent, semantic structure, the website will prove to be more effective in illustrating the content on each page. The ones I will be talking about for this blog will be described below, called <strong>sectioning elements</strong>. The sectioning element tags we utilized for our labs were <i>header, nav, main, article, section, aside,</i> and <i>footer</i> to allow authors to identify commonality across the different pages. </p>
 
-<p>The &lt;header&gt;</p>
+<p> With the importance of sectioning elements, we attributed these elements with <b>WAI-ARIA Roles</b>. Structuring an HTML page is the first step to ensuring accessibility for users to navigate through the content more reliably. This is where WAI-ARIA Roles help. WAI-ARIA is short for Web Accessibility Initiative&apos;s Accessibile Rich Internet Application. The <i>roles attribute</i> is used to identify content and its capabilities by assigning it to a predefined role. Therefore, assistive devices are able to understand the content better, how it relates to other content, and how the content may be interacted with. An example is using a navigational tool to create a redirection to another page or content on the same page. </p>
 
-<p>The &lt;main&gt;</p>
+<p>The &lt;header&gt; element represents introductory content for each page or may be used to section the root element. A header typically contains a group of introductory or navigational aids such as redirects to other segments of the same page or other websites. The header role maybe be used with the <i>banner</i>; role which represents general and informative content typically placed at the beginning of the page. </p>
 
-<p>The &lt;nav&gt;</p>
+<p>The &lt;main&gt; element represents the main content of the body of a document or application. The main content area of a document includes the primary content that is unique to that document and excludes content that is repeated across a set of documents such as navigational links, copyright information, site logos, banners, search forms, and more. The main element is typically used with the ARIA landmark role, <i>main</i>. </p>
 
-<p>The &lt;section&gt;</p>
+<p>The &lt;nav&gt; element represents a section of a page which links to other pages or to parts within the page: a section with navigation links. This may be be enclosed within the header tag since it would be typically seen as part of the introductory content. As an ARIA role, the <i>navigation</i> role is a landmark role used to identify major groups of links to help users navigate through other pages to the website or content on the page content; thus, this is a tool to classify and label sections of a page, providing structural information conveyed visually through the layout. </p>
 
-<p>The &lt;aside&gt;</p>
+<p>The &lt;section&gt; element represents a generic section of a document or application. It may used as a thematic tool to group content in which each section should be identified by including a heading as a child of the section element. </p> 
 
-<p>The &lt;article&gt; </p>
+<p>The &lt;aside&gt; element represents a section of a page that consists of content that is tangentially related to the content of the parenting sectioning content, and may be considered separate from that content. These sections are often represented as sidebars in printed typography. </p>
+
+<p>The &lt;article&gt; element represents a complete, or self-contained, composition in a document, page, application, or site. A general rule for the usage of the article element is that it is appropriate only if the element&apos;s contents are listed explicitly within the document&apos;s outline. Each &lt;article&gt; should be identified with a heading as a child of the article element. The ARIA role used for article, is <i>article</i>, which indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. Thus, it is usually set on related content items such as comments, forum posts, newpaper articles, or other items grouped together on a page. </p>
+
+<p>The &lt;footer&gt; element represents a footer its nearest ancestor sectioning content or sectioning root element. A footer usually contains information about its section such as who wrote it, links to related documents, copyright data, and other relevant content. Footers are usually used to appear at the end of a section such as the bottom of website. The footer element contains the <i>contentinfo</i> ARIA landmark role which is used to identify information repeated at the end of every page of a website such as the ones listed earlier. </p>
