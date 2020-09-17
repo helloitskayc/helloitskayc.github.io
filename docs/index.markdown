@@ -1,7 +1,6 @@
 ---
-title: Welcome to my Blog
+title: <center>Welcome to my Blog</center>
 ---
-
 <style type="text/css" media="screen">
 body {
 	font-family: Verdana, Geneva, times, serif;
@@ -12,7 +11,6 @@ body {
 	padding: 1% 2.5% 1.5%;
 	background: white;
 	line-height: 1.5;
-  border: 5.35em double rgb(83, 104, 138);
 }
 
 </style>
