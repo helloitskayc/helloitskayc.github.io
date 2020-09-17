@@ -4,13 +4,24 @@ title:  "2020/09/04 Blog 0"
 date:   2020-08-31 12:40:45 -0700
 categories: Senior-Design
 ---
+<body>
+<main role="main">
+<article role="article">
+
+<h1>Computer Information Technology</h1>
 During this semester, I am taking CIT 384, CIT 425, and CIT 480. I found each of these classes to be highly educational for exposing a new set of skills which may prove to be helpful in my endeavors for seeking out which career I want. There is a lot of material that I am learning about such as the basics of HTML, CSS, GitHub, Docker, cyber security, and more. I am expecting each of these learning materials to benefit my knowledge towards better understanding my career as a CIT major. 
 
+<h1>CIT 384</h1>
 There is a wide array of tools for developers to use to develop a scheme to generate better fluidity in determining the logical structures of each website. For CIT 384, everyone was assigned to format the proper HTML tags for each page of a website. The link posted below is the link to the work I have done  and the edits I have made in structuring a better semantic scheme for both users and clients to have an easier time navigating through the page. The primary tags that we used in our lab assignment so far are header, line break, footer, article, and aria tags. 
 
-https://glitch.com/edit/#!/kevin-chung-comp384-hw1
+<a href="https://glitch.com/edit/#!/kevin-chung-comp384-hw1" target="_blank">CIT 384 Website</a>
 
+<h1>CIT 480</h1>
 In CIT 480, I have gained my first experience using both Jekyll and GitHub. What are these two? Jekyll is a simple, static site generator for various types of projects, written in Ruby. GitHub is a platform which provides hosts for software development and version control using Git. 
 
+<h1>CIT 425</h1>
 The introduction to CIT 425 was the CIA triad: confidentiality, integrity, and availability. Confidentiality is meant to prevent the intentional or unintentional disclosure of communications between sender and recipients. Integrity ensures the accuracy and consistency of all data processing. Availability determines the authorization of those who may access resources in a reliable and timely manner. With all the potentially risks of inputting any form of data online while learning the syntax, logic, and ethics from these 3 classes allows me to gain a greater understanding of exploits and vulnerabilities. 
 
+</article>
+</main>
+</body>
