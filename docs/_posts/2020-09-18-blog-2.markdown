@@ -25,8 +25,6 @@ categories: Senior-Design
 
 <p>Logical integrity keeps data unchanged as it is used in different ways in a relational database. Logical integrity protects data from human error and hackers as well, but in a much different way than physical integrity does. There are four types of logical integrity.</p>
 
-</ul>
-
 <ol>
 
 <li><h4><b>Entity integrity</b></h4></li>
@@ -46,7 +44,7 @@ categories: Senior-Design
 <p>User&ndash;defined integrity involves the rules and constraints created by the user to fit their particular needs. Sometimes entity, referential, and domain integrity are not enough to safeguard data. Specific business rules must be taken into account and incorporated into data integrity measures.</p>
 
 </ol>
-
+</ul>
 <h2><b><u> Misconceptions about Data Integrity </u></b></h2>
 
 <p>Data integrity is <i>not</i> data security. Data security is the collection of measures taken to ensure that data is not corrupted. There are various usages of systems, processes, and procedures that makes data inaccessible to others who may use it with malicious intent. Data integrity is concerned about keeping information intact and accurate whereas the goal for data security is to protect information from inappropriate usage.</p>
