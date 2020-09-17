@@ -1,5 +1,5 @@
 ---
-title: <center>Welcome to my Blog</center>
+title: Homepage
 ---
 <style type="text/css" media="screen">
 body {
