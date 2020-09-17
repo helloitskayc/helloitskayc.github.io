@@ -16,7 +16,7 @@ categories: Senior-Design
 
 <ul>
 
-<li><h3><b>Physical integrity<b></h3></li>
+<li><h3><b>Physical integrity</b></h3></li>
 
 <p><b>Physical integrity</b> is the protection of a data&apos;s wholeness and accuracy when it is stored and retrieved. When there are physical events occuring such as natural disasters, power outages, disrupted database functions, physical integrity is compromised. Furthermore, human error, storage erosion, and many other issues make it impossible for people to obtain accurate data. </p>
 
