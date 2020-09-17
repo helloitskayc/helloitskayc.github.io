@@ -9,12 +9,12 @@ categories: Senior-Design
 <main role="main">
 <article role="article">
 
-<h1><b><u>Introduction to HTML</u></b></h1>
+<h2><b><u>Introduction to HTML</u></b></h2>
 <p>In CIT 384, we learned a lot of different types of HTML tags to further assist the developer in creating a more semantic structure to format the page for greater accessibility. By having a more consistent, semantic structure, the website will prove to be more effective in illustrating the content on each page. The ones I will be talking about for this blog will be described below, called <strong>sectioning elements</strong>. The sectioning element tags we utilized for our labs were <i>header, nav, main, article, section, aside,</i> and <i>footer</i> to allow authors to identify commonality across the different pages. </p>
 
 <p> With the importance of sectioning elements, we attributed these elements with <b>WAI-ARIA Roles</b>. Structuring an HTML page is the first step to ensuring accessibility for users to navigate through the content more reliably. This is where WAI-ARIA Roles help. WAI-ARIA is short for Web Accessibility Initiative&apos;s Accessibile Rich Internet Application. The <i>roles attribute</i> is used to identify content and its capabilities by assigning it to a predefined role. Therefore, assistive devices are able to understand the content better, how it relates to other content, and how the content may be interacted with. An example is using a navigational tool to create a redirection to another page or content on the same page. </p>
 
-<h1><b><u>HTML Tags</u></b></h1>
+<h2><b><u>HTML Tags</u></b></h2>
 <p>The <b>&lt;header&gt;</b> element represents introductory content for each page or may be used to section the root element. A header typically contains a group of introductory or navigational aids such as redirects to other segments of the same page or other websites. The header role maybe be used with the <i>banner</i>; role which represents general and informative content typically placed at the beginning of the page. </p>
 
 <p>The <b>&lt;main&gt;</b> element represents the main content of the body of a document or application. The main content area of a document includes the primary content that is unique to that document and excludes content that is repeated across a set of documents such as navigational links, copyright information, site logos, banners, search forms, and more. The main element is typically used with the ARIA landmark role, <i>main</i>. </p>

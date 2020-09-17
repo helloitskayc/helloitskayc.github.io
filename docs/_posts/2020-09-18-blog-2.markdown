@@ -7,7 +7,7 @@ categories: Senior-Design
 
 <body>
 
-<h1><b><u>What is Data Integrity?</u></b></h1>
+<h2><b><u>What is Data Integrity?</u></b></h2>
 
 <p>Data integrity ensures the accuracy and consistency of information during all processing. It also refers to the safety of data regarding regulatory compliance and security. Data integrity is maintained by various processes, rules, and standards implemented during the design phase. When the integrity of data is secure, information stored in a database will remain complete, accurate, and reliable regardless of how long it has been stored or how often it is accessed. There are 2 types of data integrity: <b>physical integrity</b> and <b>logical integrity</b>.</p>
 
@@ -19,11 +19,11 @@ categories: Senior-Design
 
 <li><h3><b>Physical integrity</b></h3></li>
 
-<p><b>Physical integrity</b> is the protection of a data&apos;s wholeness and accuracy when it is stored and retrieved. When there are physical events occuring such as natural disasters, power outages, disrupted database functions, physical integrity is compromised. Furthermore, human error, storage erosion, and many other issues make it impossible for people to obtain accurate data. </p>
+<p>Physical integrity is the protection of a data&apos;s wholeness and accuracy when it is stored and retrieved. When there are physical events occuring such as natural disasters, power outages, disrupted database functions, physical integrity is compromised. Furthermore, human error, storage erosion, and many other issues make it impossible for people to obtain accurate data. </p>
 
 <li><h3><b>Logical integrity</b></h3></li>
 
-<p><b>Logical integrity</b> keeps data unchanged as it is used in different ways in a relational database. Logical integrity protects data from human error and hackers as well, but in a much different way than physical integrity does. There are four types of logical integrity.</p>
+<p>Logical integrity keeps data unchanged as it is used in different ways in a relational database. Logical integrity protects data from human error and hackers as well, but in a much different way than physical integrity does. There are four types of logical integrity.</p>
 
 </ul>
 
