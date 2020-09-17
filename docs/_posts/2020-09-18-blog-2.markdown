@@ -1,0 +1,57 @@
+---                                                                                   layout: post
+title:  "2020/09/16 Blog 2"
+date:   2020-09-16 15:00:31 -0700
+categories: Senior-Design
+---    
+
+<body>
+
+<h1><b><u>What is Data Integrity?</u></b></h1>
+
+<p>Data integrity ensures the accuracy and consistency of information during all processing. It also refers to the safety of data regarding regulatory compliance and security. Data integrity is maintained by various processes, rules, and standards implemented during the design phase. When the integrity of data is secure, information stored in a database will remain complete, accurate, and reliable regardless of how long it has been stored or how often it is accessed. There are 2 types of data integrity: <b>physical integrity</b> and <b>logical integrity</b>.</p>
+
+<h2><b><u>Types of Data Integrity</u></b></h2>
+
+<br>
+
+<ul>
+
+<li><h3><b>Physical integrity<b></h3></li>
+
+<p><b>Physical integrity</b> is the protection of a data&apos;s wholeness and accuracy when it is stored and retrieved. When there are physical events occuring such as natural disasters, power outages, disrupted database functions, physical integrity is compromised. Furthermore, human error, storage erosion, and many other issues make it impossible for people to obtain accurate data. </p>
+
+<li><h3><b>Logical integrity</b></h3></li>
+
+<p><b>Logical integrity</b> keeps data unchanged as it is used in different ways in a relational database. Logical integrity protects data from human error and hackers as well, but in a much different way than physical integrity does. There are four types of logical integrity.</p>
+
+</ul>
+
+<ol>
+
+<li><h4><b>Entity integrity</b></h4></li>
+
+<p>Entity integrity relies on the creation of primary keys, or unique values that identify pieces of data, to ensure that data is not listed more than once and that no field in a table is null. It is a feature of relational systems which store data in tables that can be linked and used in many ways.</p>
+
+<li><h4><b>Referential integrity</b></h4></li>
+
+<p>Referential integrity refers to the series of processes that make sure data is stored and used uniformly. Rules embedded into the database&apos;s structure about how foreign keys are used ensure that only appropriate changes, additions, or deletions of data occur. </p>
+
+<li><h4><b>Domain integrity</b></h4></li>
+
+<p>Domain integrity is the collection of processes that determines the accuracy of every piece of data in a domain. A domain is a set of acceptable values that a column is allowed to contain. It can include constraints and other measures that limit the format, type, and amount of data entered.</p>
+
+<li><h4><b>User&ndash;defined integrity</b></h4></li>
+
+<p>User&ndash;defined integrity involves the rules and constraints created by the user to fit their particular needs. Sometimes entity, referential, and domain integrity are not enough to safeguard data. Specific business rules must be taken into account and incorporated into data integrity measures.</p>
+
+</ol>
+
+<h2><b><u> Misconceptions about Data Integrity </u></b></h2>
+
+<p>Data integrity is <i>not</i> data security. Data security is the collection of measures taken to ensure that data is not corrupted. There are various usages of systems, processes, and procedures that makes data inaccessible to others who may use it with malicious intent. Data integrity is concerned about keeping information intact and accurate whereas the goal for data security is to protect information from inappropriate usage.</p>
+
+<p>Data integrity is <i>not</i> data quality. Data quality refers to meeting the defined standards of processes which measure the data&apos;s age, relevance, accuracy, completeness, and reliability. Similar to data security, data quality is only another part of data integrity. Data integrity is essentially every aspect of data quality, but goes further by implementing rules and processes to govern the input of data. 
+</p>
+
+</body>
+
