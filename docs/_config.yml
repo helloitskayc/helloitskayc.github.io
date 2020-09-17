@@ -21,7 +21,7 @@
 title: CIT 480 Senior Design
 email: kevin.chung.731@my.csun.edu
 description: >- # this means to ignore newlines until "baseurl:"
-        Cal State University, Northridge - Senior Design - Kevin Chung
+        Cal State University, Northridge - Senior Design - Kevin Chuung
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  helloitskayc
@@ -30,6 +30,36 @@ github_username:  helloitskayc
 theme: minima
 plugins:
   - jekyll-feed
+
+
+body {
+                font-family: Verdana, Geneva, times, serif;
+                        font-size: 100%;
+                                width: 80%;
+                                        margin-right: auto;
+                                                margin-left: auto;
+                                                        padding: 1% 2.5% 1.5%;
+                                                                background: white;
+                                                                        line-height: 1.5;
+                                                                          border: 5.35em double rgb(83, 104, 138);
+                                                                        }
+
+                                                                        /* h1, h2, h3, h4, h5, h6, p {
+                                                                                        margin: 0;
+                                                                                                padding: 0;
+                                                                                        } 
+                                                                                        not in use yet 
+                                                                                        there are many edits woop
+                                                                                        */
+
+                                                                                        h1, h2, h3, h4, h5, h6, h7{
+                                                                                                  font-family: Verdana, Geneva, times, serif;
+                                                                                                    font-weight: bold;
+                                                                                                        color: rgb(83, 104, 138);
+                                                                                                          margin-top: 15px;
+                                                                                                            margin-bottom: 10px;
+                                                                                                              
+                                                                                                          }
 
 # Exclude from processing.
 # The following items will not be processed, by default.
