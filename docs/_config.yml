@@ -21,7 +21,7 @@
 title: CIT 480 Senior Design
 email: kevin.chung.731@my.csun.edu
 description: >- # this means to ignore newlines until "baseurl:"
-        Cal State University, Northridge - Senior Design - Kevin Chuung
+        Cal State University, Northridge - Senior Design - Kevin Chung
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  helloitskayc
