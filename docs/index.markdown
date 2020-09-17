@@ -1,4 +1,5 @@
 ---
+title: Welcome to my Blog
 ---
 
 <style type="text/css" media="screen">
@@ -14,4 +15,4 @@ body {
   border: 5.35em double rgb(83, 104, 138);
 }
 
-</style>-
+</style>
