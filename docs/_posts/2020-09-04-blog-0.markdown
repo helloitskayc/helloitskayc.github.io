@@ -6,9 +6,12 @@ categories: Senior-Design
 ---
 
 <style>
-body
-{
+body{
 background-color: #e6e6ff; }
+
+h1{ border-bottom: 2em solid black; }
+
+
 
 </style>
 
