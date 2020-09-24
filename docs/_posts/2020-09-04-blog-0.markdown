@@ -9,7 +9,7 @@ categories: Senior-Design
 body{
 background-color: #e6e6ff; }
 
-h1{ border-bottom: 20px solid black; }
+h1{ border-bottom: 1px solid black; }
 
 
 
