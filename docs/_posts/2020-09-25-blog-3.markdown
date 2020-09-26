@@ -20,17 +20,20 @@ main{ background-color: white; }
 First of all, SSL stands for <b>secure socket layer</b>. It is a cryptographic protocol used to provide security over internet communications. SSL provides a secure channel between two machines or devices operating on the internet or over a network. What does an SSL provide when it comes to security? It provides encryption, authentication, and data integrity. 
 </p>
 
-<h3><strong><u>Encryption</u></strong></h3>
+<ul>
+<li><h3><strong><u>Encryption</u></strong></h3></li>
 
 <p>Encryption protects data transmissions by acting as a means to scramble data so that only authorized parties may understand the information. Encryption is the process of converting plaintext into ciphertext. This means that this process takes readable data to alter it into a random form. Encryption requires an <i>encryption key</i> which is a set of formulaic values which both the sender and the recipient of an encrypted message know. Despite appearing random, encrypted still proceeds in a logical, predictive manner so that the party receiving the encrypted data, with possession of the key used to encrypt the data, may decrypt the data back into plaintext. 
 </p>
 
-<h3><strong><u>Authentication</u></strong></h3>
+<li><h3><strong><u>Authentication</u></strong></h3></li>
 <p>Authentication ensures that the server we are connected to is the correct server we were trying to reach. All web interactions involve both a server and a user. Most people often put sensitive, personal information on the internet. This leaves people and websites vulnerable. Therefore, having better authentication meet significant legal security requirements. User interactions need to be stable, verifiable, and secure. This is done by collecting information about each user. There are multiple forms of authentication such as basic authentication, form&ndash;based authentication, and SSL authentication. </p>
 
-<h3><strong><u>Data Integrity</u></strong></h3>
+<li><h3><strong><u>Data Integrity</u></strong></h3></li>
 <p>In my <a href="https://helloitskayc.github.io/senior-design/2020/09/16/blog-2.html" target="_blank"><u>previous blog</u></a>, I have gone over context about data integrity. To reiterate, <i>data integrity</i> ensures the accuracy and consistency of information during all processing. It also refers to the safety of data regarding regulatory compliance and security. Data integrity is maintained by various processes, rules, and standards implemented during the design phase. When the integrity of data is secure, information stored in a database will remain complete, accurate, and reliable regardless of how long it has been stored or how often it is accessed.
 </p>
+
+</ul>
 
 <caption><center><i>With the general idea of what a SSL is, I would like to explain what a SSL certificate is.</i></center></caption>
 
