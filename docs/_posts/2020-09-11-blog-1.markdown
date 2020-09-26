@@ -6,8 +6,8 @@ categories: Senior-Design
 ---
 
 <style>
-html{ background-color: #e6e6ff; }
-body { background-color: white; }                                                                                     
+body{ background-color: #e6e6ff; }
+main { background-color: white; }                                                                                     
 </style>
 
 
