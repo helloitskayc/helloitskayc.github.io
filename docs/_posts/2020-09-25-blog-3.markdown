@@ -7,15 +7,17 @@ categories: Senior-Design
 
 <style>
 html{ background-color: #e6e6ff; }
-body { background-color: white; }                                                                                     
+body { background-color: white; } 
+
 </style>
 
+<html>
 <body>
 
 <h2><strong>What is SSL?</strong></h2>
 
 <p>
-First of all, a SSL stands for <b>secure socket layer</b>. It is a cryptographic protocol used to provide security over internet communications. SSL provides a secure channel between two machines or devices operating on the internet or over a network. What does an SSL provide when it comes to security? It provides encryption, authentication, and data integrity. 
+First of all, SSL stands for <b>secure socket layer</b>. It is a cryptographic protocol used to provide security over internet communications. SSL provides a secure channel between two machines or devices operating on the internet or over a network. What does an SSL provide when it comes to security? It provides encryption, authentication, and data integrity. 
 </p>
 
 <h3><strong>Encryption</strong></h3>
@@ -32,9 +34,11 @@ First of all, a SSL stands for <b>secure socket layer</b>. It is a cryptographic
 
 <p>With the general idea of what a SSL is, it is time to explain what a SSL certificate is.</p>
 
-<h2><strong>What is a SSL certificate?<strong></h2>
+<h2><strong>What is a SSL certificate?</strong></h2>
 <p>An SSL certificate is a type of digital certificate which provides the authentication needed for a website to enable an encrypted connection. These certificates are used for a client and a server to communicate. This process is commonly used on e&ndash;commerce sites and pages which require users to submit any form of personal data. This is used to try and ensure that all data passed between the two parties remain private and secure to try and help prevent hackers from stealing private information. Thus, a SSL certificate is used to provide that the provider is exactly who they claim to be and indicate secure connections between personal devices and websites. This is a method to protect customers and gain trust for using a website from becoming a victim of malicious activity.
 </p>
 
 <p> In my next blog, I shall talk about the different types of SSL certificates. </p>
 
+</body>
+</html>
