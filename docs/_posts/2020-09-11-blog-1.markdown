@@ -5,6 +5,12 @@ date:   2020-09-11 4:00 -0700
 categories: Senior-Design
 ---
 
+<style>
+html{ background-color: #e6e6ff; }
+body { background-color: white; }                                                                                     
+</style>
+
+
 <body>
 <main role="main">
 <article role="article">

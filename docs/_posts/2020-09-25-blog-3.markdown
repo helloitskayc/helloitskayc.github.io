@@ -12,7 +12,7 @@ main{ background-color: white; }
 
 
 <body>
-<main class="main">
+<main role="main">
 
 <h2><strong><u>What is SSL?</u></strong></h2>
 

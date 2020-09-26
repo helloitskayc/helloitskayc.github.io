@@ -5,8 +5,15 @@ date:   2020-09-16 15:00:31 -0700
 categories: Senior-Design
 ---    
 
+<style>
+html{ background-color: #e6e6ff; }
+body { background-color: white; }                                                                                     
+</style>
+
+
 <body>
 
+<main role="main">
 <h2><b><u>What is Data Integrity?</u></b></h2>
 
 <p>Data integrity ensures the accuracy and consistency of information during all processing. It also refers to the safety of data regarding regulatory compliance and security. Data integrity is maintained by various processes, rules, and standards implemented during the design phase. When the integrity of data is secure, information stored in a database will remain complete, accurate, and reliable regardless of how long it has been stored or how often it is accessed. There are 2 types of data integrity: <b>physical integrity</b> and <b>logical integrity</b>.</p>
@@ -51,6 +58,6 @@ categories: Senior-Design
 
 <p>Data integrity is <i>not</i> data quality. Data quality refers to meeting the defined standards of processes which measure the data&apos;s age, relevance, accuracy, completeness, and reliability. Similar to data security, data quality is only another part of data integrity. Data integrity is essentially every aspect of data quality, but goes further by implementing rules and processes to govern the input of data. 
 </p>
-
+</main>
 </body>
 
