@@ -1,0 +1,40 @@
+---                                                                                   
+layout: post
+title:  "2020/09/25 Blog 3"
+date:   2020-09-25 22:56:31 -0700
+categories: Senior-Design
+---   
+
+<style>
+html{ background-color: #e6e6ff; }
+body { background-color: white; }                                                                                     
+</style>
+
+<body>
+
+<h2><strong>What is SSL?</strong></h2>
+
+<p>
+First of all, a SSL stands for <b>secure socket layer</b>. It is a cryptographic protocol used to provide security over internet communications. SSL provides a secure channel between two machines or devices operating on the internet or over a network. What does an SSL provide when it comes to security? It provides encryption, authentication, and data integrity. 
+</p>
+
+<h3><strong>Encryption</strong></h3>
+
+<p>Encryption protects data transmissions by acting as a means to scramble data so that only authorized parties may understand the information. Encryption is the process of converting plaintext into ciphertext. This means that this process takes readable data to alter it into a random form. Encryption requires an <i>encryption key</i> which is a set of formulaic values which both the sender and the recipient of an encrypted message know. Despite appearing random, encrypted still proceeds in a logical, predictive manner so that the party receiving the encrypted data, with possession of the key used to encrypt the data, may decrypt the data back into plaintext. 
+</p>
+
+<h3><strong>Authentication</strong></h3>
+<p>Authentication ensures that the server we are connected to is the correct server we were trying to reach. All web interactions involve both a server and a user. Most people often put sensitive, personal information on the internet. This leaves people and websites vulnerable. Therefore, having better authentication meet significant legal security requirements. User interactions need to be stable, verifiable, and secure. This is done by collecting information about each user. There are multiple forms of authentication such as basic authentication, form&ndash;based authentication, and SSL authentication. </p>
+
+<h3><strong>Data Integrity</strong></h3>
+<p>In my previous <a href="https://helloitskayc.github.io/senior-design/2020/09/16/blog-2.html" target="_blank">blog</a>, I have gone over context about data integrity. To reiterate, <i>data integrity</i> ensures the accuracy and consistency of information during all processing. It also refers to the safety of data regarding regulatory compliance and security. Data integrity is maintained by various processes, rules, and standards implemented during the design phase. When the integrity of data is secure, information stored in a database will remain complete, accurate, and reliable regardless of how long it has been stored or how often it is accessed.
+</p>
+
+<p>With the general idea of what a SSL is, it is time to explain what a SSL certificate is.</p>
+
+<h2><strong>What is a SSL certificate?<strong></h2>
+<p>An SSL certificate is a type of digital certificate which provides the authentication needed for a website to enable an encrypted connection. These certificates are used for a client and a server to communicate. This process is commonly used on e&ndash;commerce sites and pages which require users to submit any form of personal data. This is used to try and ensure that all data passed between the two parties remain private and secure to try and help prevent hackers from stealing private information. Thus, a SSL certificate is used to provide that the provider is exactly who they claim to be and indicate secure connections between personal devices and websites. This is a method to protect customers and gain trust for using a website from becoming a victim of malicious activity.
+</p>
+
+<p> In my next blog, I shall talk about the different types of SSL certificates. </p>
+
