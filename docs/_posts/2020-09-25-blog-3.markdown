@@ -41,8 +41,6 @@ First of all, SSL stands for <b>secure socket layer</b>. It is a cryptographic p
 <p>An SSL certificate is a type of digital certificate which provides the authentication needed for a website to enable an encrypted connection. These certificates are used for a client and a server to communicate. This process is commonly used on e&ndash;commerce sites and pages which require users to submit any form of personal data. This is used to try and ensure that all data passed between the two parties remain private and secure to try and help prevent hackers from stealing private information. Thus, a SSL certificate is used to provide that the provider is exactly who they claim to be and indicate secure connections between personal devices and websites. This is a method to protect customers and gain trust for using a website from becoming a victim of malicious activity.
 </p>
 
-<caption><center><i> In my next blog, I shall talk about the different types of SSL certificates. </i></center></caption>
-
 </main>
 </body>
 
