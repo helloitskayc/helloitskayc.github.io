@@ -7,25 +7,50 @@ categories: Senior-Design
 
 <style>
 html{ background-color: #e6e6ff; }
-body { background-color: white; }                                                                                     
+body { background-color: white; }                                                                        pre code {
+    color: #666666;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+}             
 </style>
 
 <body>
 
 <h2><strong>User Management</strong></h2>
-<p>User management is one of the most importnat roles that a system administrator fulfills. With my experience from working in the IT department at CSUN, we commonly handle a variety of tasks which pertain to this. Primarily - creating new accounts (portal, canvas, and email) for new students, changing passwords, deleting users, and many other configurations per student. In today's blog, I will be discussing the different ways to manage users.</p>
+<p>User management is one of the most importnat roles that a system administrator fulfills. With my experience from working in the IT department at CSUN, we commonly handle a variety of tasks which pertain to this. Primarily - creating new accounts (portal, canvas, and email) for new students, changing passwords, deleting users, and many other configurations per student. In a file style, there are sets of permissions organized into 3 classes: user, group, and others.
+
+In today's blog, I will be discussing the different ways to manage users.</p>
 
 <h2><strong>List of Commands</strong></h2>
 <ul>
 
 <li><p><b>Adduser</b>: This command adds a single user.</p></li>
 <li><p><b>Newusers</b>: Creates several new users from a textfile</p></li>
-<li><p><b>Deluser</strong>: This is used to delete a user</p></li>
-<li><p><b>Addgroup</strong>: Adds a user to a group or system</p></li>
-<li><p><b>Delgroup</strong>: removes user from a group or system</p></li>
-<li><p><b>Chage</strong>: This is used to manage the user's password</p></li>
+<li><p><b>Deluser</b>: This is used to delete a user</p></li>
+<li><p><b>Addgroup</b>: Adds a user to a group or system</p></li>
+<li><p><b>Delgroup</b>: removes user from a group or system</p></li>
+<li><p><b>Chage</b>: This is used to manage the user's password</p></li>
 
 </ul>
+
+<h2><strong>Important Files</strong></h2>
+
+<p>There are 3 main files I will be discussing:</p>
+
+<p>
+<b>/etc/passwd</b>: /etc/passwd is a text file which contains attributes about each user on a system. Each line that exists within /etc/passwd represents a single user, where the first will be listed as root (for administrative). By default, the permissions set for this file is <i>readable</i> so that anyone on the system can read it. Every line contains 7 attributes: <i>name, password, user ID, group ID, gecos, home directory,</i> and <i>shell</i>.
+</p>
+
+<p>
+<b>/etc/group</b>: /etc/group is a text file which defines the groups to which users belong under. Within Unix/Linux operating systems, multiple users can be categorized into groups. This file corresponds directly with /etc/passwd when a new user is added. If the group name is not defined for a user, then a new group name will be automatically created to be the same as the username. 
+</p>
+
+<p>
+<b>/etc/shadow</b>: /etc/shadow is a file that actually stores passwords in an encrypted format for a user's account with additional properties such as the salt, checksum, and more. In other words, the purpose of the /etc/shadow file is to store secure user account information. Every line in /etc/shadow has 8 fields: <i>1. Username, 2. Password, 3. Date of last password change, 4. Minimum, 5. Maximum, 6. Warn, 7. Inactive</i> and <i>8. Expiration</i>.
+</p>
+
+
 
 
 <h2><strong></strong></h2>
@@ -37,7 +62,6 @@ body { background-color: white; }
 <h3><strong></strong></h3>
 <h3><strong></strong></h3>
 <h3><strong></strong></h3>
-
 
 
 </body>
