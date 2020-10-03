@@ -185,5 +185,9 @@ hungevinck3:!csun1232:1002:2222:hungevinck3:/home/hungevinck3:/bin/bash
 <pre>chage [options] login</pre> 
 <p>This is a for-loop which takes in the last 3 user logins in the /etc/passwd text file, and changes when the user must change their password. I used the options <code>-d -M -W -I</code>. <b>-d</b> sets the number of days for when the password was last changed in the format of YYYY-MM-DD. <b>-M</b> sets the maximum number of days for a password to be valid. Here, I set the password expiration date to the number of letters in their name, multiplied by 10. <b>-W</b> sets the number of days warning before a password change is required. Lastly, <b>-I</b> sets the number of days of inactivity after a password has expired before the account is locked. A user who has their account locked must contact the system administrator before being able to use the system again. </p>
 
+<h2><strong>Conclusion</strong></h2>
+There's a plethora of tools for system administrators to use when it comes to managing all user accounts. System administrators essentially have full control over management systems, but it is important to understand what type of environment is being built for the organization since they provide the creation and management of users, groups, system permissions, and security settings.
+
+
 </main>
 </body>
