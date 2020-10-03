@@ -119,7 +119,7 @@ group2:x:2222:
 <pre>
 <b>Adduser</b>
 $adduser --disabled-password --gecos kevin --ingroup group1 kevin
-<pre>
+</pre>
 <p>
 <code>adduser [options] login</code><br>
 Here, I am adding a single user, kevin. The <code>--disabled-password</code> option will not set a password, but despite that - login will still be possible. The <code>--gecos</code> option will not ask for finger information. The <code>--ingroup</code> allows me to define the group for the user where I inputted group1 because that's where I want kevin to be. Once I use this command, this user will be added inside the textfile, /etc/passwd on a new line with a whole new set of fields/attributes.<br><code>kevin:x:1001:1111:kevin,,,:/home/kevin:/bin/bash</code><br> As we can see, the user kevin was created and the values, <b>x</b> refers to the disabled password, 1001 is the user ID, 1111 is group ID (group1), and it has created a directory in home, "kevin".
