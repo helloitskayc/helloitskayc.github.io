@@ -1,0 +1,43 @@
+---                                                                                   
+layout: post
+title:  "2020/10/02 Blog 4"
+date:   2020-10-02 21:17:31 -0700
+categories: Senior-Design
+---   
+
+<style>
+html{ background-color: #e6e6ff; }
+body { background-color: white; }                                                                                     
+</style>
+
+<body>
+
+<h2><strong>User Management</strong></h2>
+<p>User management is one of the most importnat roles that a system administrator fulfills. With my experience from working in the IT department at CSUN, we commonly handle a variety of tasks which pertain to this. Primarily - creating new accounts (portal, canvas, and email) for new students, changing passwords, deleting users, and many other configurations per student. In today's blog, I will be discussing the different ways to manage users.</p>
+
+<h2><strong>List of Commands</strong></h2>
+<ul>
+
+<li><p><b>Adduser</b>: This command adds a single user.</p></li>
+<li><p><b>Newusers</b>: Creates several new users from a textfile</p></li>
+<li><p><b>Deluser</strong>: This is used to delete a user</p></li>
+<li><p><b>Addgroup</strong>: Adds a user to a group or system</p></li>
+<li><p><b>Delgroup</strong>: removes user from a group or system</p></li>
+<li><p><b>Chage</strong>: This is used to manage the user's password</p></li>
+
+</ul>
+
+
+<h2><strong></strong></h2>
+
+
+
+
+
+<h3><strong></strong></h3>
+<h3><strong></strong></h3>
+<h3><strong></strong></h3>
+
+
+
+</body>
