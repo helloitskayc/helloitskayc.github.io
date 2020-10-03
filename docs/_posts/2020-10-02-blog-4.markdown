@@ -1,13 +1,14 @@
 ---                                                                                   
 layout: post
 title:  "2020/10/02 Blog 4"
-date:   2020-10-02 19:17:31 -0700
+date:   2020-10-02 14:17:31 -0700
 categories: Senior-Design
 ---   
 
 <style>
 html{ background-color: #e6e6ff; }
-body { background-color: white; }                                                                        pre code {
+body { background-color: white; } 
+pre{
     color: #666666;
     background-color: #e6e6ff;
     padding: 2px;
@@ -49,19 +50,5 @@ In today's blog, I will be discussing the different ways to manage users.</p>
 <p>
 <b>/etc/shadow</b>: /etc/shadow is a file that actually stores passwords in an encrypted format for a user's account with additional properties such as the salt, checksum, and more. In other words, the purpose of the /etc/shadow file is to store secure user account information. Every line in /etc/shadow has 8 fields: <i>1. Username, 2. Password, 3. Date of last password change, 4. Minimum, 5. Maximum, 6. Warn, 7. Inactive</i> and <i>8. Expiration</i>.
 </p>
-
-
-
-
-<h2><strong></strong></h2>
-
-
-
-
-
-<h3><strong></strong></h3>
-<h3><strong></strong></h3>
-<h3><strong></strong></h3>
-
 
 </body>
