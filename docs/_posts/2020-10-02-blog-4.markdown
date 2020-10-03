@@ -9,10 +9,15 @@ categories: Senior-Design
 body{ background-color: #e6e6ff; }
 main { background-color: white; } 
 pre, code{
-    color: #666666;
+    color: black;
     background-color: #e6e6ff;
     padding: 2px;
     padding-right: 7px;
+    white-space: pre-wrap;      
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap;     
+    white-space: -o-pre-wrap;   
+    word-wrap: break-word;      
 }      
       
 </style>
@@ -57,7 +62,7 @@ pre, code{
 </p>
 
 <h2><strong>How do the files look inside?</strong></h2>
-<h3>/etc/passwd</h3>
+<h3><b>/etc/passwd</b></h3>
 <pre>
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
@@ -69,7 +74,7 @@ mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
 news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
 </pre>
 
-<h3>/etc/group</h3>
+<h3><b>/etc/group</b></h3>
 <pre>
 news:x:9:
 uucp:x:10:
@@ -86,7 +91,7 @@ sudo:x:27:helloitskc
 audio:x:29:helloitskc
 </pre>
 
-<h3>/etc/shadow</h3>
+<h3><b>/etc/shadow</b></h3>
 <pre>
 root:*:12345:0:99999:7:::
 daemon:*:12345:0:99999:7:::
@@ -96,10 +101,16 @@ sync:*:12345:0:99999:7:::
 games:*:12345:0:99999:7:::
 </pre>
 
+<h3><b>/etc/skel/</b></h3>
+<pre>
+helloitskc@DESKTOP-IITTPJG:/etc/skel$ ls -a
+.  ..  .bash_logout  .bashrc  .profile
+</pre>
+
 <h2><strong>Examples for Commands</strong></h2>
 
+<h3><b>addgroup</b></h3> 
 <pre>
-<b>addgroup</b>
 $addgroup --gid 1111 group1
 $addgroup --gid 2222 group2
 </pre>
@@ -109,15 +120,15 @@ Adding group 'group1' (GID 1111) ...
 Done.
 Adding group 'group2' (GID 2222) ...
 Done.
-
-This is how they appear in /etc/group
-
+</pre>
+<p>This is how they appear in /etc/group</p>
+<pre>
 group1:x:1111:
 group2:x:2222:
 </pre>
 
+<h3><b>adduser</b></h3> 
 <pre>
-<b>Adduser</b>
 $adduser --disabled-password --gecos kevin --ingroup group1 kevin
 </pre>
 <p>
@@ -125,8 +136,8 @@ $adduser --disabled-password --gecos kevin --ingroup group1 kevin
 Here, I am adding a single user, kevin. The <code>--disabled-password</code> option will not set a password, but despite that - login will still be possible. The <code>--gecos</code> option will not ask for finger information. The <code>--ingroup</code> allows me to define the group for the user where I inputted group1 because that's where I want kevin to be. Once I use this command, this user will be added inside the textfile, /etc/passwd on a new line with a whole new set of fields/attributes.<br><code>kevin:x:1001:1111:kevin,,,:/home/kevin:/bin/bash</code><br> As we can see, the user kevin was created and the values, <b>x</b> refers to the disabled password, 1001 is the user ID, 1111 is group ID (group1), and it has created a directory in home, "kevin".
 </p>
 
+<h3><b>deluser</b></h3>
 <pre>
-<b>deluser</b>
 $deluser kevin
 Removing user 'kevin' ...
 Warning: group 'group1' has no more members.
@@ -137,7 +148,42 @@ Warning: group 'group1' has no more members.
 deluser is used to delete a single user. In this case, I used deluser with the user "kevin", which will remove "kevin" from /etc/passwd and /etc/group. The "warning" message appeared because kevin was the only user inside the group. Therefore, group1 is now empty.
 </p>
 
+<h3><b>delgroup</b></h3> 
+<pre>
+$delgroup group1
+Removing group 'group1' ...
+Done.
+</pre>
+<pre>
+delgroup [options] groupname
+</pre>
+<p>delgroup will remove the group from the /etc/group file. Therefore, group1 will no longer show up when I read the file nor is it usable anymore.</p>
 
+<h3><b>newusers</b></h3>
+<pre>
+$echo kevinchung1:!csun1230:1000:2222:kevinchung1:/home/kevinchung1:/bin/bash > users.txt
+$echo chungkevin2:!csun1231:1001:2222:chungkevin2:/home/chungkevin2:/bin/bash >> users.txt
+$echo hungevinck3:!csun1232:1002:2222:hungevinck3:/home/hungevinck3:/bin/bash >> users.txt
+$mv users.txt /etc/skel
+</pre>
+<p>The difference between addusers and newusers is that newusers adds a batch of new users into the system from a text file. In this case, I am pre-defining the users settings by setting their username, password, userID, groupID (group2), home environment, and pushing it into the user.txt file. This is where <code>/etc/skel</code> is being used. I moved the users.txt file into /etc/skel because it will copy files and directories onto the new user's homedirectory. Since I am adding a new batch of users, the command would like like this: 
+<br><pre>
+newusers [options] filename
+$newusers /etc/skel/users.txt
+$cat /etc/passwd 
+...
+kevinchung1:!csun1230:1000:2222:kevinchung1:/home/kevinchung1:/bin/bash
+chungkevin2:!csun1231:1001:2222:chungkevin2:/home/chungkevin2:/bin/bash
+hungevinck3:!csun1232:1002:2222:hungevinck3:/home/hungevinck3:/bin/bash 
+...
+</pre>
+<br>This will take all the users within this file and begin creating an environment for each of these users.</p>
+
+<h3><b>chage</b></h3>
+<pre>for x in $(cat /etc/passwd | tail -3 | cut -d ":" -f1); do chage -d 2020-10-03 -M $((${#x}&#42;10)) -W 3 -I 2 $x; done
+</pre>
+<pre>chage [options] login</pre> 
+<p>This is a for-loop which takes in the last 3 user logins in the /etc/passwd text file, and changes when the user must change their password. I used the options <code>-d -M -W -I</code>. <b>-d</b> sets the number of days for when the password was last changed in the format of YYYY-MM-DD. <b>-M</b> sets the maximum number of days for a password to be valid. Here, I set the password expiration date to the number of letters in their name, multiplied by 10. <b>-W</b> sets the number of days warning before a password change is required. Lastly, <b>-I</b> sets the number of days of inactivity after a password has expired before the account is locked. A user who has their account locked must contact the system administrator before being able to use the system again. </p>
 
 </main>
 </body>
