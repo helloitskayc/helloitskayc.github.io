@@ -1,4 +1,7 @@
----                                                                                          layout: post                                                                                 title: "2020/10/09 Blog 5"                                                                   date: 2020-10-09 20:58:31 -0700
+---
+layout: post
+title: "2020/10/09 Blog 5"
+date: 2020-10-09 20:58:31 -0700
 categories: Senior-Design
 ---
 
@@ -28,7 +31,7 @@ In my last blog, I talked about user management, but today, I will be talking ab
 <h2><strong>Blog5.sh</strong></h2>
 
 <p>
-This section is to set up an environment with the packages installed and updated as root with the <pre>apt-get update && apt-get install -y sudo</pre> command. The <pre>unminimize</pre> command will install the standard Ubuntu Server packages if you want to convert a Minimal instance to a standard Server environment for interactive use. After the unminimize command, we will be creating a pre-defined user "asd12345". </p>
+This section is to set up an environment with the packages installed and updated as root with the <code>apt-get update && apt-get install -y sudo</code> command. The <code>unminimize</code> command will install the standard Ubuntu Server packages if you want to convert a Minimal instance to a standard Server environment for interactive use. After the unminimize command, we will be creating a pre-defined user "asd12345". </p>
 
 <p>
 <a href="https://helloitskayc.github.io/senior-design/2020/10/02/blog-4.html" target="_blank">Click here to refer to my last blog about user management</a>
@@ -57,7 +60,7 @@ git config --global user.name "$NAME"
 <h3><strong>Apache Setup</strong></h3>
 
 <p>
-After setting the environment setup, we install and update apache2. When installing a Apache2, a directory with its files is contained in the folder /etc directory. We'll be copying a file with the <b>cp</b> command which is used like this <pre>cp [OPTION] Source Destination</pre>. We will be copying the source file <b>./000-default.conf</b> to the destination <b>./my_site.conf</b>. The command <pre>a2dissite</pre> disables a site by removing symlinks which I have removed from 000-default. After I removed the symlink from the default site, I also remove the default file, index.html, and <pre>printenv</pre> to copy my current environment with the <b>my_site.conf</b> file into the var/www/html directory, replacing index.html. Opposite of a2dissite, <pre>a2ensite</pre> is a script that enables the specified site. Once I input this command, I run the apache2 and my_site will be loaded up onto the apache2 server.
+After setting the environment setup, we install and update apache2. When installing a Apache2, a directory with its files is contained in the folder /etc directory. We'll be copying a file with the <b>cp</b> command which is used like this <code>cp [OPTION] Source Destination</code>. We will be copying the source file <b>./000-default.conf</b> to the destination <b>./my_site.conf</b>. The command <code>a2dissite</code> disables a site by removing symlinks which I have removed from 000-default. After I removed the symlink from the default site, I also remove the default file, index.html, and <code>printenv</code> to copy my current environment with the <b>my_site.conf</b> file into the var/www/html directory, replacing index.html. Opposite of a2dissite, <code>a2ensite</code> is a script that enables the specified site. Once I input this command, I run the apache2 and my_site will be loaded up onto the apache2 server.
 </p>
 
 <pre>
