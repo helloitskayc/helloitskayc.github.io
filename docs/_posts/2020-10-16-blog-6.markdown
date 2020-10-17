@@ -1,0 +1,43 @@
+---                                                                                        
+layout: post                         
+title: "2020/10/16 Blog 6"                                                
+date: 2020-10-16 17:50:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a{color: blue}
+a:hover{text-decoration:underline; color: red;}
+</style>
+
+<body>
+<main role="main">
+<p>In the last few blogs, I have talked about a few things such as user management and automation as part of system administration. Today, we will be discussing an introduction to creating and hosting a server, but first we will discuss the basics of cloud computing.<br>Cloud computing is an ever-growing service that is commonly seen in today's world, but what type of service does cloud computing offer? What are some of the benefits to cloud computing? How can it be implemented in a real-world organization?
+</p>
+
+<h2><strong>Understanding Cloud Computing</strong></h2>
+<p> Cloud computing means storing and accessing data and programs on the internet rather than directly on a computer's hard drive. Ultimately, cloud refers to the internet where users can access technology services to use resources such as computing power, storage, and databases without buying, owning, or maintaining servers. Cloud computing is one of the most common things we will see in organizations today since there's a widespread of utilities and benefits to take advantage of. Depending on the platform hosting the cloud service, organization's may use them for data backup, disaster recoveries, data storaging, virtual desktops, software development, and more.
+</p>
+
+<h2><strong>Cloud Computing Benefits</strong></h2>
+<p>Cloud computing offers many benefits. The greatest strength of its quality of life improvements to an organization is its flexibility. In today's world, the number of web-enabled devices continues to grow alongside the way they are purposed and used. It allows employees to improve their work practices since they can access data from anywhere they need to as long as their device is capable of accessing the internet. Therefore, there is a high-demand to the many essentials cloud computing offers to its end-users such as:</p>
+
+<ul>
+<li><p><b>Reducing IT costs</b> since there is less of a need to manage and maintain IT systems. Organizations do not need to purchase expensive, high-end systems or equipment - reducing the cost of the resources: cost of system upgrades, cost of energy consumption, cost of labor, and cost of maintenance.</p></li>
+
+<li><p><b>Scalability</b> where an organization can address their needs and scale the cloud computing services to suit their needs which grants that flexibility. The cloud computing service provider can handle majority of the work in expending their time and resources to provide what the organization needs.</p></li>
+
+<li><p><b>Accessibility</b> - there is a broad range of technological services that may be used. The organization just needs to spin up the resources they need as they go along. An example is AWS cloud computing which offers organizations computational power, storage, and databases. They can just deploy their services quickly and gain access to what they need.</p></li>
+
+<li><p><b>Productivity</b> increases since there are many quality of life implementations as I mentioned earlier regarding its flexibility. The deployment of cloud software tends to be faster than conventional installation of on-premise equipment. It takes a couple of hours to install a cloud computing model. Therefore, employees spend less time waiting for things to spin up and can spend more time working. Since another organization is handling maintenance, there is less priorities for an organization to focus on those things and could implement their resources on the necessary projects.</p></li>
+
+</ul>
+
+<h2><strong>How does CSUN use Cloud Computing Services?</strong></h2>
+<p><a href="https://mycsun.account.box.com/login" target="_blank">myCSUNbox</a> is a website students use to store various types of files. In other words, it is a database and storage service that both students and professors have access to a virtual service where that they can access anywhere. Another example of a cloud service is google drive since all students are given a g-mail account which comes with a google drive that is capable of storing data too. Furthermore, they have access to all the necessary features such as google docs, powerpoint, and more. Lastly, <a href="https://mycsunsoftware.csun.edu/vpn/index.html" target="_blank">myCSUNsoftware</a> is a place that deploys a virtual machine where students can easily access all the software applications that CSUN offers on almost any machine and without needing to subscribe to their high cost fees.
+</p>
+
+</main>
+</body>
