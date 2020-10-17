@@ -8,13 +8,14 @@ categories: Senior-Design
 <style>
 body{ background-color: #e6e6ff; }
 main { background-color: white; }
-a{color: blue}
+a{font-weight:bold;
+color: blue}
 a:hover{text-decoration:underline; color: red;}
 </style>
 
 <body>
 <main role="main">
-<p>In the last few blogs, I have talked about a few things such as user management and automation as part of system administration. Today, we will be discussing an introduction to creating and hosting a server, but first we will discuss the basics of cloud computing.<br>Cloud computing is an ever-growing service that is commonly seen in today's world, but what type of service does cloud computing offer? What are some of the benefits to cloud computing? How can it be implemented in a real-world organization?
+<p>Today, we will be discussing an introduction to the basics of cloud computing. Cloud computing is an ever-growing service that is commonly seen in today's world, but what type of service does cloud computing offer? What are some of the benefits to cloud computing? What are some examples of cloud computing usage in a real-world organization like CSUN?
 </p>
 
 <h2><strong>Understanding Cloud Computing</strong></h2>
