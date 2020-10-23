@@ -29,7 +29,7 @@ pre, code{
 
 <h2><strong>Package Management</strong></h2>
 <p>
-Another important aspect for system administrators to understand is package management. There are tools that are meant to easily assist system administrators to facilitate their software. Therefore, a package manager is a programming language's tool to help create project environments and easily import dependencies. It automates the process of installing, upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner. Furthermore, package managers maintain a database of software dependencies and version information to prevent software mismatches and missing prerequisites. Generally, you can specify dependies, package name, author, keywords and version number. This helps online repositories store the package and allows others to find your project. By allowing the creation of ones packages, developers are able to think about how their package will be used and implemented.
+Another important aspect for system administrators to understand is package management. There are tools that are meant to easily assist system administrators to facilitate their software. Therefore, a package manager is a programming language's tool to help create project environments and easily import dependencies. It automates the process of installing, upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner. Furthermore, package managers maintain a database of software dependencies and version information to prevent software mismatches and missing prerequisites. Generally, you can specify dependencies, package name, author, keywords and version number. This helps online repositories store the package and allows others to find your project. By allowing the creation of ones packages, developers are able to think about how their package will be used and implemented.
 </p>
 
 <h2><strong>What is a Package?</strong></h2>
@@ -43,7 +43,7 @@ Since package managers are designed to eliminate the need for manual processes s
 </p>
 <ul>
 <li>File archivers which are programs that combines files into an archive file or series of archive files for easier transportation or storage</li>
-<li>Security measures and verification protocals to ensure the safety of the package</li>
+<li>Security protocals to ensure the safety and authenticity of the package</li>
 <li>Search, download, install, or update capabilities for existing software</li>
 <li>Methods to group packages to reduce user interaction and confusion</li>
 <li>Dependency management so that packages are properly installed with those requiring them</li>
@@ -56,14 +56,19 @@ Many package managers exist today, each serving different purposes. A few that I
 
 <h3><strong>Package Manager: pip</strong></h3>
 <p>
-Starting with "pip", it allows you to easily add dependencies to projects. pip is the package manager for Python which allows users to install and manage libaries and dependencies that are not included within the initial, standard library given when installing Python. Considering how important package management is, it is included with Python 2 and Python 3. Python has a very active community which contributes to the development of new packages which may help with development needs. These are published on the <a href=https://pypi.org/" target="_blank">PyPI</a>, short for Python Index Page. The PyPI hosts a large collection of packages including development frameworks, tools, and libraries. These packages tend to simplify development with Python by providing friendly interfaces to functions that already exist with the standard library. On the command line, pip looks like this when trying to install packages: <code>$ pip install [packagename]</code>. 
+Starting with "pip", it allows you to easily add dependencies to projects. pip is the package manager for Python which allows users to install and manage libaries and dependencies that are not included within the initial, standard library given when installing Python. Considering how important package management is, it is included with Python 2 and Python 3. Python has a very active community which contributes to the development of new packages which may help with development needs. These are published on the <a href="https://pypi.org/" target="_blank">Python Index Page</a>. The PyPI hosts a large collection of packages including development frameworks, tools, and libraries. These packages tend to simplify development with Python by providing friendly interfaces to functions that already exist with the standard library. On the command line, pip looks like this when trying to install packages: <code>$ pip install [packagename]</code>. 
 </p>
 <p><b>Example of pip</b></p>
-
+<pre>
+pip install "packagename"        #General usage
+pip install "packagename==1.2"   #Specific Version Install
+pip install "packagename>=1,<2"  #Install a Greater Version than & Less than Another
+pip install "packagename~=1.4.2" #Install a version that is compatible with a certain version
+</pre>
 
 <h3><strong>Package Manager and Repository Tool: npm</strong></h3>
 <p>
-npm is short for Node Package Manager. It is an online repository for the publishing of opensource Node.js projects, and it is also a command-line utility for interacting with those repositories that helps with package installation, version management, and dependency management. Like pip, there is a wide selection of libraries and applications published on npm which can be found on <a href="http://npmjs.org/">npmjs</a>. Using npm in the command line looks like this (for windows shell): <code> C:\>npm install [packagename] </code>. All npm packages are defined in files called <b>package.json</b> where at least two fields must be present in the definition file: name and version. Dependencies are also defined in package.json
+npm is short for Node Package Manager. It is an online repository for the publishing of open source Node.js projects, and it is also a command-line utility for interacting with those repositories that helps with package installation, version management, and dependency management. Like pip, there is a wide selection of libraries and applications published on npm which can be found on <a href="http://npmjs.org/">npmjs</a>. Using npm in the command line looks like this (for windows shell): <code> C:\>npm install [packagename] </code>. All npm packages are defined in files called <b>package.json</b> where at least two fields must be present in the definition file: name and version. Dependencies are also defined in package.json
 </p>
 <p><b>Example of package.json</b></p>
 <pre>
