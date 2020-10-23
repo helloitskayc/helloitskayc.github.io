@@ -1,0 +1,81 @@
+---                                                                                        
+layout: post                         
+title: "2020/10/23 Blog 7"                                                
+date: 2020-10-23 17:50:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;                                                                         
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+</style>
+
+<body>
+<main role="main">
+
+<h2><strong>Package Management</strong></h2>
+<p>
+Another important aspect for system administrators to understand is package management. There are tools that are meant to easily assist system administrators to facilitate their software. Therefore, a package manager is a programming language's tool to help create project environments and easily import dependencies. It automates the process of installing, upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner. Furthermore, package managers maintain a database of software dependencies and version information to prevent software mismatches and missing prerequisites. Generally, you can specify dependies, package name, author, keywords and version number. This helps online repositories store the package and allows others to find your project. By allowing the creation of ones packages, developers are able to think about how their package will be used and implemented.
+</p>
+
+<h2><strong>What is a Package?</strong></h2>
+<p>
+Packages collect and group a multitude of data files together into a single archive file for easier portability purposes and storage, or to compress files to reduce its size to reduce the storage space it takes. <b>Metadata</b> is a set of data that describes and gives information about other data, and these packages contain metadata which includes the package description (purpose), version number, and list of dependencies for it to function properly. 
+</p>
+ 
+<h2><strong>Functions</strong></h2>
+<p>
+Since package managers are designed to eliminate the need for manual processes such as installation and updating software, their automation is one of its benefits. A software package is an archive file containing a computer program with its necessary metadata for its deployment. Their purpose is to find, install, maintain, or uninstall software packages to cater to the user's needs. A few of these functions are normally included in package management:
+</p>
+<ul>
+<li>File archivers which are programs that combines files into an archive file or series of archive files for easier transportation or storage</li>
+<li>Security measures and verification protocals to ensure the safety of the package</li>
+<li>Search, download, install, or update capabilities for existing software</li>
+<li>Methods to group packages to reduce user interaction and confusion</li>
+<li>Dependency management so that packages are properly installed with those requiring them</li>
+</ul>
+
+<h2><strong>Package Management</strong></h2>
+<p>
+Many package managers exist today, each serving different purposes. A few that I used recently were <b>pip</b> and <b>npm</b> which are open source for anyone to use for their development needs. 
+</p>
+
+<h3><strong>Package Manager: pip</strong></h3>
+<p>
+Starting with "pip", it allows you to easily add dependencies to projects. pip is the package manager for Python which allows users to install and manage libaries and dependencies that are not included within the initial, standard library given when installing Python. Considering how important package management is, it is included with Python 2 and Python 3. Python has a very active community which contributes to the development of new packages which may help with development needs. These are published on the <a href=https://pypi.org/" target="_blank">PyPI</a>, short for Python Index Page. The PyPI hosts a large collection of packages including development frameworks, tools, and libraries. These packages tend to simplify development with Python by providing friendly interfaces to functions that already exist with the standard library. On the command line, pip looks like this when trying to install packages: <code>$ pip install [packagename]</code>. 
+</p>
+<p><b>Example of pip</b></p>
+
+
+<h3><strong>Package Manager and Repository Tool: npm</strong></h3>
+<p>
+npm is short for Node Package Manager. It is an online repository for the publishing of opensource Node.js projects, and it is also a command-line utility for interacting with those repositories that helps with package installation, version management, and dependency management. Like pip, there is a wide selection of libraries and applications published on npm which can be found on <a href="http://npmjs.org/">npmjs</a>. Using npm in the command line looks like this (for windows shell): <code> C:\>npm install [packagename] </code>. All npm packages are defined in files called <b>package.json</b> where at least two fields must be present in the definition file: name and version. Dependencies are also defined in package.json
+</p>
+<p><b>Example of package.json</b></p>
+<pre>
+{
+"name" : "foo",
+"version" : "1.2.3",
+"description" : "A package for fooing things",
+"main" : "foo.js",
+"keywords" : ["foo", "fool", "foolish"],
+"author" : "John Doe",
+"licence" : "ISC"
+}
+</pre>
+</main>
+</body>
