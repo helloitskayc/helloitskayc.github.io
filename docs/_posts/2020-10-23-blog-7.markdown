@@ -43,7 +43,7 @@ Since package managers are designed to eliminate the need for manual processes s
 </p>
 <ul>
 <li>File archivers which are programs that combines files into an archive file or series of archive files for easier transportation or storage</li>
-<li>Security protocals to ensure the safety and authenticity of the package</li>
+<li>Security protocols to ensure the safety and authenticity of the package</li>
 <li>Search, download, install, or update capabilities for existing software</li>
 <li>Methods to group packages to reduce user interaction and confusion</li>
 <li>Dependency management so that packages are properly installed with those requiring them</li>
