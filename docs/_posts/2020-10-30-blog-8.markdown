@@ -21,6 +21,7 @@ pre, code{
     white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
+caption{ font-style:italic; }
 
 </style>
 
@@ -66,6 +67,7 @@ Playbooks are files where Ansible codes are written. These playbooks are written
 A bash script is created to perform the specified tasks whether it be copying files, installing packages, modifying permissions, creating files, or personalizing the system's environment. After loading up the bash script in a new environment for the first time, and you re-run the script, an error may potentially occur. Why might this happen? The new environment may be potentially set to its desired state already depending on the script. The bash script will have ran and finalized its tasks in the environment.
 </p>
 
+<h3><strong>Benefits of Ansible</strong></h3>
 <p>
 Here is where the importance of using a tool like Ansible comes into play. Ansible and other configuration management systems describe the desired state of the machine. For example, a file should exist in whatever location needed, owned by said user, with specified permissions. Furthermore, this includes <i>packages that should be installed</i> alongside various configurations. Describing the desired state in this case means that the user has the leisure to <i>worry less about making things happen</i> and <i>focus more on what needs to happen</i>. For example, let's say we have a file, "testfile1", and directory, "test", we can simply say that testfile1 should be inside the test directory. We do not need to write a code that directly creates and implements the file, and checks whether or not it exists inside the directory. 
 </p>
@@ -73,9 +75,9 @@ Here is where the importance of using a tool like Ansible comes into play. Ansib
 Therefore, the next benefit to Ansible is that we are able to get a documentation of what is in the desired state and what changed. Re-running the Ansible playbook helps us stay on track since the configuration management tool will catch what does not work, allowing us to narrow down on errors and discover what works and what does not on a deeper level. Lastly, if the user re-runs the playbook and it fully works without any changes, then that indicates that the user truly has the desired environment.
 </p>
 
-<p>
+<caption>
 In the next blog, I will be talking about how to create an Ansible playbook, use ansible modules, and describe the desired state as stated above.
-</p>
+</caption>
 
 </main>
 </body>
