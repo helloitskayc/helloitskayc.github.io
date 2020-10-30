@@ -1,0 +1,81 @@
+---                                                                                        
+layout: post                         
+title: "2020/10/30 Blog 8"                                                
+date: 2020-10-30 13:50:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+</style>
+
+<body>
+<main role="main">
+
+<h2><strong>Ansible</strong></h2>
+<p>
+Ansible is a simplistic IT automation tool that automates a plethora of IT needs such as cloud provisioning, configuration management, application deployment, and more. Ansible is designed to model your IT infrastructure depending how ones systems are related rather than managing one system at a time. Ansible is easy to deploy since it mainly uses a simple language, YAML, which allows the users to describe which automation jobs are needed to be done in a basic structure.
+</p>
+
+<p>
+The way Ansible works is by connecting nodes and pushing out small programs called <a href="https://docs.ansible.com/ansible/2.8/modules/list_of_all_modules.html" target="_blank"><b>Ansible modules</b></a> to them. These programs are written to be the resources that will be used to determine the <i>desired state</i> of system. The great thing about these modules is that they can be on any machine without the need for servers, daemons, or databases. The main thing required is the usage of any preferred text editor.
+</p>
+
+<h2><strong>What are Modules in Ansible?</strong></h2>
+<p>
+These modules are task plugins or library plugins that can be used from the command line or in a playbook task. Ansible executes each module and collects return values in JSON format data. Therefore, these modules can be written in any programming language. Each module takes in arguments in the form of <code>key=value</code> arguments where the space is delimited. Some modules take no arguments, and the comand/shell modules take the string of the command that the user wants to run. Here are a few examples of running the ansible command:
+</p>
+
+<p>Executing Ansible modules from the command line.</p>
+<pre>
+ansible webservers -m service -a "name=httpd state=started"
+ansible webservers -m ping
+ansible webservers -m command -a "/sbin/reboot -t now"
+</pre>
+
+<p>Pass arguments to a module using the YAML syntax:</p>
+<pre>
+- name: restart webserver
+  service:
+     name: httpd
+     state: restarted
+</pre>
+
+<h2><strong>What is an Ansible Playbook?</strong></h2>
+<p>
+Playbooks are files where Ansible codes are written. These playbooks are written in a YAML format which stands for "Yet Another Markup Language". Playbooks are one of the core features of Ansible since you can tell Ansible what to execute to create the desired state of ones system. YAML has a strict format such that white-space is also important to the structure of them. 
+</p>
+
+<h3><strong>Why Use Ansible instead of Standard Scripts?</strong></h3>
+<p>
+A bash script is created to perform the specified tasks whether it be copying files, installing packages, modifying permissions, creating files, or personalizing the system's environment. After loading up the bash script in a new environment for the first time, and you re-run the script, an error may potentially occur. Why might this happen? The new environment may be potentially set to its desired state already depending on the script. The bash script will have ran and finalized its tasks in the environment.
+</p>
+
+<p>
+Here is where the importance of using a tool like Ansible comes into play. Ansible and other configuration management systems describe the desired state of the machine. For example, a file should exist in whatever location needed, owned by said user, with specified permissions. Furthermore, this includes <i>packages that should be installed</i> alongside various configurations. Describing the desired state in this case means that the user has the leisure to <i>worry less about making things happen</i> and <i>focus more on what needs to happen</i>. For example, let's say we have a file, "testfile1", and directory, "test", we can simply say that testfile1 should be inside the test directory. We do not need to write a code that directly creates and implements the file, and checks whether or not it exists inside the directory. 
+</p>
+<p>
+Therefore, the next benefit to Ansible is that we are able to get a documentation of what is in the desired state and what changed. Re-running the Ansible playbook helps us stay on track since the configuration management tool will catch what does not work, allowing us to narrow down on errors and discover what works and what does not on a deeper level. Lastly, if the user re-runs the playbook and it fully works without any changes, then that indicates that the user truly has the desired environment.
+</p>
+
+<p>
+In the next blog, I will be talking about how to create an Ansible playbook, use ansible modules, and describe the desired state as stated above.
+</p>
+
+</main>
+</body>
