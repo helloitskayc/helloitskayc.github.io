@@ -142,7 +142,7 @@ To explain lineinfile more specifically we will talk about the parameters. We de
 
 <li><b>command</b></li>
 <p>
-The command module takes the command name follwoed by a list of space-delimited arguments. The given command will be executed on selected nodes. These commands will not be processed through the shell. 
+The command module takes the command name followed by a list of space-delimited arguments. The given command will be executed on selected nodes. These commands will not be processed through the shell. 
 </p>
 <pre>
 - name: Run composer install
