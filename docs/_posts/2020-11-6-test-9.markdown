@@ -1,0 +1,182 @@
+---                                                                                     
+layout: post                         
+title: "2020/11/06 Blog 9"                                                
+date: 2020-11-06 8:45:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+</style>
+
+<body>
+<main role="main">
+
+<h2><strong>Automation with Ansible Playbook</strong></h2>
+
+<p>
+Ansible playbooks allow users to create a set of instructions (plays) that are sent to run on a single target or groups of target hosts. They basically act as a to-do list for what you want Ansible to do since you list out the instructions. Playbooks contain the steps that users want to execute on a particular machine, and they run sequentially. Playbooks are files where Ansible codes are written as they are the building blocks for all use cases of Ansible. These playbooks are written in a YAML format which stands for "Yet Another Markup Language". YAML has a strict format such that white-space is also important to the structure of them. Playbooks are one of the core features of Ansible since you can tell Ansible what to execute to create the desired state of ones system. 
+</p>
+
+<p>
+<a href="https://helloitskayc.github.io/senior-design/2020/10/30/blog-8.html" target="_blank">Click here to learn more about the benefits of Ansible</a>
+</p>
+
+<h2><strong>Structure of Playbook</strong></h2>
+<p>
+Every playbook holds one or many <b>plays</b> in it. The function of a play is to map a set of instructions defined against a particular host. Since playbooks are written in YAML, it will start with 3 hyphens in the beginning of the file. 
+
+<h2><strong>How to Create a Playbook</strong></h2>
+<p>There are many different YAML tags to properly create an Ansible Playbook; therefore, I will explain each of the ones I will be using here. </p>
+
+<ul>
+<li>name<li>This tag specifies the name of the Ansible playbook. Primarily, what this playbook will do. Any name can be given since it is essentially just a title for the user to define the play.</li></li>
+<pre>
+name: Install, Configure, Run Apache2
+</pre>
+
+<li>hosts<li>This tag specifies the list of hosts or host group we want to run the playbook on. This is a mandatory field/tag since it tells Ansible which hosts to run the listed tasks. Tasks can be run on the same machine or on a remote machine. A user can run tasks of multiple machines as well which is why this tag may have a group of hosts entry as well. This would be done at the beginning of the YAML file.</li></li>
+<pre>
+---
+hosts: localhost
+</pre>
+
+<li><p>set_fact</p><li></p>set_fact is a module that is included with Ansible installations. This variable allows the user to set new variables on a host-by-host basis. Variables created with set_fact have different precendence depending on whether they are cached or not. In other words, it may give a value higher priority than other precedence rules for Ansible. The example shown below where we set ansible's port to 8080.</p></li></li>
+<pre>
+- name: Change port to 8080
+  set_fact:
+          ansible_port: 8080
+</pre>
+
+
+<li>tasks<li><p>All playbooks contain tasks or a list of tasks that need to be executed. Therefore, they are a list of actions that the host(s) need to perform. A tasks field contains the name of the task. This also helps the user recognize the play and proves to be useful for debugging a playbook since we can see what plays work and those that do not. Every task is linked to a module that should be executed alongside the arguments required for it to execute.</p></li></li>
+<pre>
+tasks:
+   - name: Change port to 8080
+     set_fact:
+             ansible_port: 8080
+</pre>
+
+<li>become<li>Ansible allows you to "become"</li></li>
+<pre>
+</pre>
+
+<li>apt</li>
+<pre>
+</pre>
+
+<li>state</li>
+<pre>
+</pre>
+
+<li>linein</li>
+<pre>
+</pre>
+
+<li>args</li>
+<pre>
+</pre>
+
+<li>command</li>
+<pre>
+</pre>
+
+<li>shell</li>
+<pre>
+</pre>
+
+</ul>
+
+<h2><strong>Ansible Playbook that Installs, Configures, and Starts Apache2</strong></h2>
+<pre>
+---
+- hosts: localhost
+  tasks:
+          - name: Change port to 8080
+            set_fact:
+                    ansible_port: 8080
+		  
+		  - name: Install required packages
+            apt:
+                    name:
+                            - curl
+                            - git
+                            - apache2
+                            - mysql-client
+                            - php
+                            - libapache2-mod-php
+                            - php-mysql
+                            - php7.2-cli
+                            - php7.2-curl
+                            - php7.2-gd
+                            - php7.2-mbstring
+                            - php7.2-mysql
+                            - php7.2-xml
+                            - php-xml
+                    state: present
+
+          - name: Git clone affinity
+            become: yes
+            git: repo=https://github.com/csuntechlab/affinity.git dest=/var/www/html/affinity
+
+          - name: Chown affinity
+            become: yes
+			shell: chown -hR www-data:www-data affinity/
+            args:
+                    chdir: /var/www/html
+
+          - name: Create symbolic link
+            become: yes
+            command: ln -s /var/www/html/affinity/public /var/www/html/public
+
+          - name: Edit 000-default conf file
+            lineinfile:
+                    path: /etc/apache2/sites-available/000-default.conf
+                    regexp: '^(.*)DocumentRoot /var/www/html(.*)$'
+                    line: 'DocumentRoot /var/www/html/public'
+                    backrefs: yes
+
+          - name: Edit apache conf file
+            lineinfile:
+                    path: /etc/apache2/apache2.conf
+                    regexp: '^(.*)Require all denied(.*)$'
+                    line: 'Require all granted'
+                    backrefs: yes
+
+          - name: Edit apache2 conf file
+            lineinfile:
+                    path: /etc/apache2/apache2.conf
+                    regexp: '^(.*)<Directory /var/www/>(.*)$'
+                    line: '<Directory /var/www/html/public>'
+                    backrefs: yes
+
+          - name: Install composer package
+            become: yes
+            shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+          - name: Run composer install
+            command: composer install
+            args:
+                    chdir: /var/www/html/affinity
+
+          - name: Restart apache
+            service: name=apache2 state=started
+</pre>
+
+</main>
+</body>
