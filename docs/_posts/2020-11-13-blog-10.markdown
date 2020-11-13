@@ -14,7 +14,7 @@ main { background-color: white; }
 <body>
 <main role="main">
 
-<h2><strong>Symmetric Cryptography</strong></h2>
+<h2><strong>Cryptography</strong></h2>
 
 <p>
 There are multiple methodoligies that exist to help system administrators provide security to their organization. <b>Cryptography</b> is a widely used one in protecting most organizations today. Cryptography provides secure communication against the presence of malicious third-parties, but also to provide secrecy and integrity for our data. It is provided on a basis of encryption which uses a mathematical algorithm and a key to transform inputs into an encrypted output like ciphertext. Ciphertext cannot be read until it has been converted back into plaintext (once the ciphertext has been decrypted) with a key. Therefore, the decryption cipher is another algorithm that transforms this ciphertext back into plaintext. These algorithms are considered secure if an attacker cannot determine properties of the plaintext or key. There are 2 different types of cryptography: symmetric and assymetric cryptography. 
