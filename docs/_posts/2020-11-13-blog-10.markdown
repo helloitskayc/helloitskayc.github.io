@@ -1,0 +1,60 @@
+---                                                                                     
+layout: post                         
+title: "2020/11/13 Blog 10"                                                
+date: 2020-11-13 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+
+</style>
+
+<body>
+<main role="main">
+
+<h2><strong>Symmetric Cryptography</strong></h2>
+
+<p>
+There are multiple methodoligies that exist to help system administrators provide security to their organization. <b>Cryptography</b> is a widely used one in protecting most organizations today. Cryptography provides secure communication against the presence of malicious third-parties, but also to provide secrecy and integrity for our data. It is provided on a basis of encryption which uses a mathematical algorithm and a key to transform inputs into an encrypted output like ciphertext. Ciphertext cannot be read until it has been converted back into plaintext (once the ciphertext has been decrypted) with a key. Therefore, the decryption cipher is another algorithm that transforms this ciphertext back into plaintext. These algorithms are considered secure if an attacker cannot determine properties of the plaintext or key. There are 2 different types of cryptography: symmetric and assymetric cryptography. 
+</p>
+
+<h2><strong>What is Symmetric Key Cryptography?</strong></h2>
+
+<p>
+Symmetric key cryptography is any cryptographic algorithm that is based on a shared key used to encrypt or decrypt plaintext/ciphertext. This cryptography relies on a single key shared between two or more users. These tend to be more efficient than asymmetric encryption because these keys are able to computer about 5000 times faster than assymetric keys; therefore, they are generally more preferred when exchanging large amounts of data. There are many types of symmetric key cryptographies such as AES, DES, and 3DES. With these cryptographies, there are key exchange protocols used to establish these shared encryption keys such as Diffie-Hellman and RSA. 
+</p>
+
+<p>
+If the encryption method is strong enough, the only way to read or access the information contained in the ciphertext is by using the shared key to decrypt it. In other words, the decryption process is converting the ciphertext back to plaintext. The way security of symmetric encryption systems work is based on how difficult it would be brute force and randomly guess what the shared key is. The most common methods are based on <b>block ciphers</b> and <b>stream ciphers</b>.
+</p>
+
+<h2><strong>Block Ciphers</strong></h2>
+
+<p>
+Block ciphers group data into blocks of predetermined sizes and encrypt them by using the shared key and encryption algorithm. Therefore, it is a deterministic algorithm operating in fixed-length groups of bits, called blocks. These blocks are specified components in the design of many cryptographic protocols and are commonly used to encrypt large amounts of data and data exchange protocols. However, a secure block cipher is only capable of providing encryption for a single block of data at a time, using a fixed key. Each block cipher consists of two paired algorithms, one for encryption, and the other for decryption. These algorithms accept 2 inputs: an input block and key, both based on predefined sizes. As the data is being encrypted, the system holds the data in its memory as it waits for complete blocks.
+</p>
+
+<h2><strong>Stream Ciphers</strong></h2>
+<p>
+A stream cipher is a symmetric key cipher where plaintext digits are combined with a cipher digit keystream. A keystream is a stream of random/pseudorandom characters combined with a plaintext message to produce an encrypted message in ciphertext. Within these stream ciphers, each plaintext digit is individually encrypted with the corresponding digit of the keystream to give that digit to the ciphertext stream. Since these encryptions are based on the current state of the cipher, it is also known as a state cipher. Data is encrypted as it streams instead of being retained in the system’s memory.
+</p>
+
+<h2><strong>What are the Advantages and Disadvantages of using Symmetric Key Cryptography?</strong></h2>
+
+<p><b>Advantages</b></p>
+
+<p>
+Symmetric algorithms offer high levels of security while being capable of allowing messages to be encrypted and decrypted quickly. These algorithms also require less computing power than assymetric ones. The security provided by symmetric encryption can be improved simply by increasing the key length. Therefore, every bit added to the length of a symmetric key makes it exponentially more difficult for hackers and other malicious third-parties to crack. However, having this kind of simplicity comes at a great risk.
+</p>
+
+<p><b>Disadvantages</b></p>
+
+<p>
+The inherent problem of using a symmetric encryption lies within its simplicity: it uses a single shared key to both encrypt and decrypt data. If these keys were to be shared over an unsecured network, they may be intercepted by unauthorized users who may gain access to the data exchanges. In other words, the encrypted data is compromised. Therefore, to mitigate this disadvantage, there are many protocols use a combination of symmetric and assymetric encryption to establish more secure connections. 
+</p>
+
+
+</main>
+</body>
