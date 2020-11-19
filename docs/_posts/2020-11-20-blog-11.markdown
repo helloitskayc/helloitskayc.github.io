@@ -15,7 +15,7 @@ a:hover{ background-color: #e6e6ff; }
 <body>
 <main role="main">
 
-<a href="https://helloitskayc.github.io/senior-design/2020/11/13/blog-10.html" target="_blank">Click here to learn more about symmetric cryptography.</a>
+<p><a href="https://helloitskayc.github.io/senior-design/2020/11/13/blog-10.html" target="_blank">Click here to learn more about symmetric cryptography.</a></p>
 
 <p>In my previous blog, I talked about symmetric cryptography. Today, I will be talking about how asymmetric cryptography is different from symmetric crypotgraphy and how it works to help improve cyber security. First, here are a few definitions to help us understand this method better.</p>
 

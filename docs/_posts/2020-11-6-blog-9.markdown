@@ -172,7 +172,5 @@ This can be used to explicitly pass named parameters to actions that support fre
 
 </ul>
 
-<h2><strong>Ansible Playbook that Installs, Configures, and Starts Apache2</strong></h2>
-
 </main>
 </body>
