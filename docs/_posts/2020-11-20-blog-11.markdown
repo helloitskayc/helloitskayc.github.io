@@ -1,0 +1,68 @@
+---                                                                                     
+layout: post                         
+title: "2020/11/20 Blog 11"                                                
+date: 2020-11-20 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+</style>
+
+<body>
+<main role="main">
+
+<a href="https://helloitskayc.github.io/senior-design/2020/11/13/blog-10.html" target="_blank">Click here to learn more about symmetric cryptography.</a>
+
+<p>In my previous blog, I talked about symmetric cryptography. Today, I will be talking about how asymmetric cryptography is different from symmetric crypotgraphy and how it works to help improve cyber security. First, here are a few definitions to help us understand this method better.</p>
+
+
+<h2><strong>Defintions</strong></h2>
+<ul>
+<li><b>Confidentiality</b> - In terms of cyber security, it is a message that a sender encrypts using the recipient's public key which can be decrypted by the recipient's paired private key. Therefore, it involves a set of rules which is usually executed through confidentiality agreements which limits access or places restriction on various types of information. Confidentiality measures protect information from unauthorized access and misuse.</li>
+
+<li><b>Authentication (protocol)</b> - a type of computer communications/cryptographic protocol that is designed for the transfer of authentication data between two entities. This ensures that the server we are connected to is the correct server we were trying to reach, and we are who we claim to be. Therefore, this acts as a means to identify and verify one another. All web interactions involve both a server and a user. Most people often put sensitive, personal information on the internet. This leaves people and websites vulnerable. Furthermore, it is easy to steal another person's identity; therefore, there are various verification methods for this. </li>
+</ul>
+
+<p><b>The best-known uses for asymmetric cryptography are these 2 definitions:</b></p>
+
+<ul>
+<li><b>Public Key Encryption</b> - A message is encrypted with a recipient's public key and cannot be decrypted by anyone else who does not share the matching private key, in other words, the owner of that key and/or the person associated to the public key. This is meant to ensure confidentiality.</li>
+
+<li><b>Digital Signatures</b> - a message is signed with the sender's private key and can be verified by anyone who has access to the sender's public key. This is a verification that proves that the sender had access to the private key; therefore, is likely to be the person associated to the public key. This is meant to ensure <a href="https://helloitskayc.github.io/senior-design/2020/09/16/blog-2.html" target="_blank">data integrity</a>.</li>
+</ul>
+
+<h2><strong>Asymmetric Cryptography</strong></h2>
+
+<p>
+This cryptography is also known as <b>public-key cryptography</b>. This is a cryptographic system which uses a pair of keys between the owner and the authorized users. The relationship between these users is that the owner are the only ones who own a <b>private key</b> and the receivers are given a <b>public key</b>. When sending a message to the recipient, the message would be encrypted by using the receiver's public key. The only way this message can be decrypted is by using the private key. This means that, unlike symmetric keys, the server is capable of sending the encrypted key on insecure channels to the clients since only the client's private key may decrypt the message using the server's public key to encrypt this message. They key is not identical; therefore, eliminates the major issue of using symmetric cryptography. The sender of a message may combine a message with a private key to create a <b>digital signature</b> on it. For all recipients that hold a corresponding public key may combine the same message and its digital signature to verify whether or not the signature was valid. The most common application of this methodology for cyber security is in encrypting communication to provide <b>confidentiality</b>. Another application is the digital signature to verify <b>authentication</b>. Since it uses the process of providing different keys between the server and users, this process is about 5000 times slower than symmetric cryptography.
+</p>
+
+<h2><strong>What are the Advantages and Disadvantages of using Asymmetric Key Cryptography?</strong></h2>
+
+<h3><strong>Advantages</strong></h3>
+<p>
+Since this cryptography allows message authentication such as digital signatures, message recipients may verify these messages from where they are truly coming from. Asymmetric encryption also solves the issues of distributing keys for encryption unlike symmetric keys. Instead of exchanging 1 key between parties, there are a private keys which are kept in secret and public keys which may be individually distributed amongst users. The private keys do not ever need to be revealed or given to anyone else besides the owner. Since these messages are digitally signed, it calls for non-repudiation which is essentially the acknowledgement of a message. The sender will not be able to deny it. Lastly, the digital signature helps this cryptography detect whether or not a message was tampered during its transfer. 
+</p>
+
+
+<h3><strong>Disadvantages</strong></h3>
+<p>
+Since it is slower than symmetric encryption, it is not suitable for transferring large amounts of data at a time. This is because the public keys are not authenticated (only the private keys are). There is no absolute method to determine whether or not the public key belongs to the person that it specifies, meaning that users must verify their public keys to determine if it truly belongs to them. And if the user loses the private key, there is no way to decrypt the received messages. Therefore, this will be lost information and the damage may be severe. The risk of losing these keys to an attacker may be a widespread security compromise since all messages may be decrypted by the attacker. 
+</p>
+
+<p>
+One approach to prevent these attacks involves the usage of a <b>public key infrastructure (PKI)</b>. This is a set of roles, policies, and procedures needed to create, manage, distribute, use, store and revoke digital certificates and manage public-key encryption. The purpose of a PKI is to facilitate the secure electronic transfer of information for various network activities. It binds public keys with respective identities of entities such as people and organizations. This binding process is established through a process which pertains to a <b>certificate authority</b>.
+</p>
+
+<h2><strong>Certificate Authority (CA)</strong></h2>
+<p>
+A certificate authority is an entity that issues digital certificates. <b>Digital certificates</b> are electronic documents used to prove ownership of a public key. This documentation includes information about the key, information about its owner, and information about the digital signature of an entity that has verified the certificate's contents. If the signature is valid, and the software examining the certificate trusts the issuer, then it uses that key to communicate securely with the certificate's owner. Therefore, a digital certificate certifies the ownership of the public key by the named owner of the certificate. This is a method used to allow other parties to rely upon signatures or on assertions made about the private which corresponds to the certified public key. In other words, a CA acts as a trusted third party to determine the validity of the information being communicated between the owner of the certificate and by the receiving party relying upon the certificate.
+</p>
+
+</main>
+</body>
+
