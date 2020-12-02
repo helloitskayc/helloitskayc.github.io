@@ -21,6 +21,12 @@ pre, code{
     white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 </style>
 
 <body>
@@ -35,7 +41,7 @@ This method is another method to securely exchange cryptographic keys on a publi
 An analogy commonly used to explain the Diffie-Hellmen key exchange is by discussing the two parties, Alice and Bob (fictional characters commonly used to talk about cryptographic protocol), publicly agreeing on an initial commonality which does not need to be kept a secret. However, the exchange proceeds, Alice and Bob choose their own personalized, secret colors. The most important part of this process is that they mix their secret colors together with their mutually shared color, and then publicly exchange these mixed colors. After each party receives each other's mixed colors, they mix their exchanged color with their own secret color again, finally resulting in a common secret since they will end up with the same color. If another party were to eavesdrop this exchange, they would only be aware of initial common color and the initial mixed color. 
 </p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg" alt="Diffie-Hellman" height="400" width="300" align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg" alt="Diffie-Hellman" height="500" width="400" class="center">
 
 <h2><strong>Algorithm</strong></h2>
 <p>
@@ -46,11 +52,11 @@ The algorithm used by the Diffie-Hellman, from top to bottom of the image above 
 
 <li><p>Alice and Bob agree on a prime number <code><b>p</b></code> and a base value <code><b>g</b></code>.</p></li>
 
-<li>Alice chooses her secret number <code><b>a</b></code> and sends Bob the number <code><b>A</b> = g<sup>a</sup> mod p</code>.</p></li>
+<li><p>Alice chooses her secret number <code><b>a</b></code> and sends Bob the number <code><b>A</b> = g<sup>a</sup> mod p</code>.</p></li>
 
-<li><p>Bob will choose his secret number <code><b>b</b></code>, and sends Alice the number <code><b>B</b> = g<sup>a</sup> mod p</code>.</p></li>
+<li><p>Bob will choose his secret number <code><b>b</b></code> and sends Alice the number <code><b>B</b> = g<sup>a</sup> mod p</code>.</p></li>
 
-<li><p>Alice calculates the value <code><b>s</b> = <b>B<sup>a</sup></b>mod p</code>.</p></li>
+<li><p>Alice calculates the value <code><b>s</b> = <b>B<sup>a</sup></b> mod p</code>.</p></li>
 
 <li><p>Bob calculates the value <code><b>s</b> = <b>A<sup>b</sup></b> mod p</code>.</p></li>
 
@@ -62,16 +68,16 @@ The algorithm used by the Diffie-Hellman, from top to bottom of the image above 
 
 <h2><strong>Example</strong></h2>
 <pre>
-1. Alice and Bob choose prime p=23 and base g=5.
-2. Alice chooses a=4, and sends Bob value "A"
-	A = (5<sup>4</sup> % 23) = 4
-3. Bob chooses b=3, and sends Alice value "B"
-	B = (5<sup>3</sup> % 23) = 10
-4. Alice computes "s"
-	s = (10<sup>4</sup> % 23) = 18
-5. Bob computes "s"
-	s = (4<sup>3</sup> % 23) = 18
-6. Both Alice and Bob share the same secret key now. 
+1. Alice and Bob choose prime <b>p=23</b> and <b>base g=5</b>
+2. Alice chooses <b>a=4</b>, and sends Bob value <b>A</b>
+	<b>A</b> = (5<sup>4</sup> % 23) = <b>4</b>
+3. Bob chooses <b>b=3</b>, and sends Alice value <b>B</b>
+	<b>B</b> = (5<sup>3</sup> % 23) = <b>10</b>
+4. Alice computes <b>s</b>
+	<b>s</b> = (10<sup>4</sup> % 23) = <b>18</b>
+5. Bob computes <b>s</b>
+	<b>s</b> = (4<sup>3</sup> % 23) = <b>18</b>
+6. <b>Both Alice and Bob share the same secret key now</b>. 
 </pre>
 
 <p>This is useful because this technique may be used to create an encryption key with someone, and then proceed to encrypt traffic with that key. As the traffic is recorded and later analyzed, it is very difficult to determine what the key truly was despite the public exchanges. In other words, <b>forward secrecy</b>, is made. Forward secrecy, in cryptography, is a feature of specific key agreement protocols which grants assurances that the session keys will not be compromised even if long-term secrets used in the session key exchange were compromised. It helps protect past sessions against future compromises by generating a unique session key for every session the user initiates. Thus, analyzing traffic at a later date may steal the information since they key was never saved, transmitted, nor made visible.</p>
