@@ -1,0 +1,80 @@
+---                                                                                     
+layout: post                         
+title: "2020/12/04 Blog 12"                                                
+date: 2020-12-04 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+</style>
+
+<body>
+<main role="main">
+<h2><strong>Diffie-Hellman Key Exchange</strong></h2>
+<p>
+This method is another method to securely exchange cryptographic keys on a public network (insecure channel). This key exchange's name originates from the makers, Whitfield Diffie and Martin Hellman. It is a way of creating a shared secret between two people which cannot be seen by just observing the communication between them. The reason for this is because the parties are creating the key together, not just sharing information during the key exchange. The two parties do not require any prior information since they will be jointly establishing a shared secret key. Once the key is made, the key may be used to encrypt communication using a <a href="https://helloitskayc.github.io/senior-design/2020/11/13/blog-10.html" target="_blank">symmetric key</a>. Therefore, this exchange is more of a key agreement rather than a transmission of information. Neither party require a public key or private key pair even though they may be used for additional security.
+</p>
+
+<h2><strong>Analogy</strong></h2>
+<p>
+An analogy commonly used to explain the Diffie-Hellmen key exchange is by discussing the two parties, Alice and Bob (fictional characters commonly used to talk about cryptographic protocol), publicly agreeing on an initial commonality which does not need to be kept a secret. However, the exchange proceeds, Alice and Bob choose their own personalized, secret colors. The most important part of this process is that they mix their secret colors together with their mutually shared color, and then publicly exchange these mixed colors. After each party receives each other's mixed colors, they mix their exchanged color with their own secret color again, finally resulting in a common secret since they will end up with the same color. If another party were to eavesdrop this exchange, they would only be aware of initial common color and the initial mixed color. 
+</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg" alt="Diffie-Hellman" height="400" width="300">
+
+<h2><strong>Algorithm</strong></h2>
+<p>
+The algorithm used by the Diffie-Hellman, from top to bottom of the image above is followed by 6 steps.
+</p>
+
+<ol>
+
+<li><p>Alice and Bob agree on a prime number <code><b>p</b></code> and a base value <code><b>g</b></code>.</p></li>
+
+<li>Alice chooses her secret number <code><b>a</b></code> and sends Bob the number <code><b>A</b> = g<sup>a</sup> mod p</code>.</p></li>
+
+<li><p>Bob will choose his secret number <code><b>b</b></code>, and sends Alice the number <code><b>B</b> = g<sup>a</sup> mod p</code>.</p></li>
+
+<li><p>Alice calculates the value <code><b>s</b> = <b>B<sup>a</sup></b>mod p</code>.</p></li>
+
+<li><p>Bob calculates the value <code><b>s</b> = <b>A<sup>b</sup></b> mod p</code>.</p></li>
+
+<li><p>Once these values are calculated, they both share the value <code><b>s</b></code> which is their session key.</p></li>
+
+</ol>
+
+<p>Only <b>a</b> and <b>b</b>, which were privately chosen by Alice and Bob, were kept a secret whereas all the other values were sent publicly.</p>
+
+<h2><strong>Example</strong></h2>
+<pre>
+1. Alice and Bob choose prime p=23 and base g=5.
+2. Alice chooses a=4, and sends Bob value "A"
+	A = (5<sup>4</sup> % 23) = 4
+3. Bob chooses b=3, and sends Alice value "B"
+	B = (5<sup>3</sup> % 23) = 10
+4. Alice computes "s"
+	s = (10<sup>4</sup> % 23) = 18
+5. Bob computes "s"
+	s = (4<sup>3</sup> % 23) = 18
+6. Both Alice and Bob share the same secret key now. 
+</pre>
+
+<p>This is useful because this technique may be used to create an encryption key with someone, and then proceed to encrypt traffic with that key. As the traffic is recorded and later analyzed, it is very difficult to determine what the key truly was despite the public exchanges. In other words, <b>forward secrecy</b>, is made. Forward secrecy, in cryptography, is a feature of specific key agreement protocols which grants assurances that the session keys will not be compromised even if long-term secrets used in the session key exchange were compromised. It helps protect past sessions against future compromises by generating a unique session key for every session the user initiates. Thus, analyzing traffic at a later date may steal the information since they key was never saved, transmitted, nor made visible.</p>
+
+</main>
+</body>
