@@ -35,7 +35,7 @@ This method is another method to securely exchange cryptographic keys on a publi
 An analogy commonly used to explain the Diffie-Hellmen key exchange is by discussing the two parties, Alice and Bob (fictional characters commonly used to talk about cryptographic protocol), publicly agreeing on an initial commonality which does not need to be kept a secret. However, the exchange proceeds, Alice and Bob choose their own personalized, secret colors. The most important part of this process is that they mix their secret colors together with their mutually shared color, and then publicly exchange these mixed colors. After each party receives each other's mixed colors, they mix their exchanged color with their own secret color again, finally resulting in a common secret since they will end up with the same color. If another party were to eavesdrop this exchange, they would only be aware of initial common color and the initial mixed color. 
 </p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg" alt="Diffie-Hellman" height="400" width="300">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg" alt="Diffie-Hellman" height="400" width="300" align="center">
 
 <h2><strong>Algorithm</strong></h2>
 <p>
