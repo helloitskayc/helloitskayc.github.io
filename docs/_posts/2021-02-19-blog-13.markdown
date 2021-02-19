@@ -1,0 +1,79 @@
+---                                                                          layout: post                         
+title: "2020/02/19" Blog 13"                                                
+date: 2021-02-19 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+</style>
+
+<body>
+<main role="main">
+
+<h2><strong>Creating a GitHub Repository from an Ubuntu Virtual Machine</strong></h2>
+
+<h2><strong>Prerequisites</strong></h2>
+<ol>
+<li><p>Prepare an Ubuntu VM on your device using tools such as VirtualBox. </p></li>
+<li><p>Create a GitHub account.</p></li>
+<li><p>Once the Ubuntu VM has been prepared, use the command <code>apt-get install git</code> to install git command tools.</p></li>
+<li><p>After <b>git</b> has been installed, use the command <code>apt-get install jekyll</code> onto the VM command-line.</p></li>
+</ol>
+
+<h2><strong>Creating a Repository </strong></h2>
+
+<ol>
+<li><p>Run the command <code>jekyll new testsite</code>.</p></li>
+
+<li><p>Before launching the website, switch the VM network settings to the <b>host-only adapter</b>. After setting the host-only adapter, use the command <code>ifconfig</code>. The IP address received from this command will appear in the form of <b>inet: 192.168.56.116</b>.</p></li>
+
+<li><p>To run the testsite, change to the new testsite directory and run <code>bundle exec jekyll serve switch --host 0.0.0.0</code>. This will launch the GitHub testsite. On your local machine, not the VM, open the browser and type in the IP address shown from the ifconfig with :4000 at the end of it.</p></li>
+
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/launchtestsite.bmp" alt="launchtestsite">
+
+<li><p>On your personal GitHub, create an empty repository with the desired name.</p></li>
+
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/newrepo.bmp" alt="newrepo">
+
+<li><p>Run the command <code>git init</code> which will create a new git repository in the current working directory.</p></li>
+
+<li><p>Run the command <code>git remote add origin https://github.com/username/repositoryname</code>. This links the repository onto a remote git server which is GitHub, named <b>origin</b>.</p></li>
+
+<li><p>Run the command <code>git add .</code> which adds the entire present working directory
+</p></li>
+
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/initialrepo.bmp" alt="initialrepo">
+
+<li><p>Before committing, change the VM network adapter to <b>NAT</b>. </p></li>
+
+<li><p>Run the command <code>git commit -m "Initialize Repository"</code>. However, you will need to set your username and email address first using 
+<code>git config --global user.email "email address"</code> and <code>git config --global user.name "Your name"</code>.
+</p></li>
+
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/commit.bmp" alt="commit">
+
+<li><p>Lastly, use the command <code>git push origin -u origin master</code>. The <b>git push</b> command is used to upload and transfer commits from local repositories to a remote repository. 
+</p></li>
+
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/push.bmp" alt="push">
+
+</ol>
+
+
+</main>
+</body>
