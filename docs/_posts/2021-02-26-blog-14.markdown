@@ -38,7 +38,7 @@ pre, code{
 <ul><p><b>Create individual IAM users</b> </p></ul>
 <p>Since you don't want to share your AWS account root user credentials or use it to access to AWS, you can create users to distribute your resources instead, and you would want to create a user for yourself too (giving yourself administrative permissions, and use your user to do all your work). AWS allows you to specify unique sets of security credentials and permissions for each user, including the ability to revoke or modify them anytime necessary. This lets you, the owner, have more control over handling your system. </p>
 
-<ul><p><b>Use groups to assign permissions to IAM users </p></ul>
+<ul><p><b>Use groups to assign permissions to IAM users</b> </p></ul>
 <p>By default, all users are set without permissions, and there is no default group that all users are placed in. It is far more convenient to create a group with a defined set of permissions catering to job-related functions and place each newly created user into the correct group. Every user placed into those groups will inherit the permissions of the group.</p>
 
 <ul><p><b>Grant least privilege</b> </p></ul>
