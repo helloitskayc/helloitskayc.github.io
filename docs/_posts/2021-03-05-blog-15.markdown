@@ -1,0 +1,56 @@
+---
+layout: post                         
+title: "2020/03/05 Blog 15"                                                
+date: 2021-03-05 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+</style>
+
+<body>
+<main role="main">
+<h2><strong>What is a WebDriver?</strong></h2>
+
+<p>A <b>webdriver</b> remote control interface for user agents that allows introspection and control. It offers a platform- and language-agnostic wire protocol that allows out-of-process programs to remotely control web browser activity. It defines common methods that many browsers such as FireFox and Chrome use. These class methods originate from the WebDriver interface. </p>
+
+<h2><strong>What is a Selenium WebDriver?</strong></h2>
+
+<p>This is an open-source collection of APIs that is used for testing web applications. The Selenium Webdriver tool is used for automating web application testing to determine what works as intended or not. Not only does this tool allow you to execite <a href="https://www.softwaretestingmaterial.com/what-is-cross-browser-testing/" target="_blank">cross-browser testing</a> from FireFox, Chrome, Safari, and Internet Explorer, WebDriver enables you to use a programming language to create your test scripts. One of the key features is using conditional operations such as if-then-else or switch-case.
+Therefore, the primary purpose of a WebDriver (as a whole) is to enable web authors to create tests that automate a user agent using a different controlling mechanism, but it can also be used to allow in-browser scripts to monitor a potentially separate browser.</p>
+
+<h2><strong>How does WebDriver work?</strong></h2>
+<p>
+WebDriver uses the browser's native automation support to make direct calls to it. The browser driver is used for this communication. It then contributes its object-oriented API  for <b>Document Object Model (DOM) interaction</b> and <b>browser control</b>.
+</p>
+
+<p>
+In its simplest form, an <b>object API</b> is a description of how objects work in a given object-oriented language – usually it is expressed as a set of classes with an associated list of class methods. The <b>Dcoument Object Model</b> is an HTML and XML document programming interface. It represents a page so that programs can modify the document structure, layout, and content. The DOM represents the document as nodes and objects. This way, programming languages may connect to the web page. A <b>web page</b> is a document that may be displayed in the browser window or as the HTML source. How DOM treats web pages is that it represents the same document so that it can be modified with scripting languages.</p>
+
+<p> 
+When any Automated Script is ran, an HTTP Request is generated for each Selenium command and sent to the browser to the driver. A HTTP Server is used by the browser driver to receive HTTP Requests. This HTTP Server determines the steps required for the Selenium command to be implemented. The execution status is sent back to the HTTP Server, which then sends the status to the automation script.
+</p>
+
+<h2><strong>Examples of Use Cases for Web Drivers</strong></h2>
+
+<ol>
+<ul><b>Automation</b></ul>
+<p>Automates web application testing by imitating the user's actions on web applications using selenium commands. It imitates the real actions by handling mouse and keyboard events. Web Driver talks to the OS directly using the OS's native capability. The browser driver is used for this communication. </p>
+
+<ul><b>Performance</b></ul>
+<p>Selenium can be used to test maximum load our servers or applications can handle. In other words, it may be used for load or stress testing. </p>
+
+<ul><b>Regression</b></ul>
+<p>Regression testing refers to re-running functional and non-functional tests to ensure that previously developed and tested software still performs after a change. If not, this would be called a regression. Since Selenium requires minimum human effort, there is less room for humanistic errors to occur and increased speed of regression testing.</p>
+
+<ul><b>Monitoring of Applications</b></ul>
+<p>Web Driver can be used to check if the application is still functioning. This can be used to be performed to understand and capture application errors if there is downtime.  </p>
+
+</ol>
+
+</main>
+</body>
