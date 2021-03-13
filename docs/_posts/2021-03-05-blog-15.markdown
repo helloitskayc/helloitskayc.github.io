@@ -37,20 +37,20 @@ When any Automated Script is ran, an HTTP Request is generated for each Selenium
 
 <h2><strong>Examples of Use Cases for Web Drivers</strong></h2>
 
-<ol>
-<ul><b>Automation</b></ul>
+<ul>
+<li><b>Automation</b></li>
 <p>Automates web application testing by imitating the user's actions on web applications using selenium commands. It imitates the real actions by handling mouse and keyboard events. Web Driver talks to the OS directly using the OS's native capability. The browser driver is used for this communication. </p>
 
-<ul><b>Performance</b></ul>
+<li><b>Performance</b></li>
 <p>Selenium can be used to test maximum load our servers or applications can handle. In other words, it may be used for load or stress testing. </p>
 
-<ul><b>Regression</b></ul>
+<li><b>Regression</b></li>
 <p>Regression testing refers to re-running functional and non-functional tests to ensure that previously developed and tested software still performs after a change. If not, this would be called a regression. Since Selenium requires minimum human effort, there is less room for humanistic errors to occur and increased speed of regression testing.</p>
 
-<ul><b>Monitoring of Applications</b></ul>
+<li><b>Monitoring of Applications</b></li>
 <p>Web Driver can be used to check if the application is still functioning. This can be used to be performed to understand and capture application errors if there is downtime.  </p>
 
-</ol>
+</ul>
 
 </main>
 </body>

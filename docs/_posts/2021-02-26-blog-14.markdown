@@ -31,56 +31,56 @@ pre, code{
 <h2><strong>How to Secure your AWS resources</strong></h2>
 <p>Knowing how to handle the resources in your IAM is just as important learning how to secure it so that there are less risks involved when developing your infrastructure. Also, a handful of questions about these security practices appeared on the exam. Therefore, knowing your IAM security best practices is crucial to aiming to succeed in passing the certification or simply those who need to familiarize themselves with AWS services. Knowing the general purpose of each security best practice is a great start to improving your infrastructure. </p>
 
-<ol>
-<ul><p><b>Lock away your AWS account root user access keys</b> </p></ul>
+<ul>
+<li><p><b>Lock away your AWS account root user access keys</b> </p></li>
 <p>Access keys are used to make programmatic requests to AWS. You would not want to use the root user access keys because the AWS account root user gives full access to all resources for AWS services, including billing information. Since you cannot reduce permissions associated to your AWS account root user access key, it would be better if nobody else can gain access to all your resources to begin with since we may never know who may take advantage of it, exploit its purposes, and abuse it.</p>
 
-<ul><p><b>Create individual IAM users</b> </p></ul>
+<li><p><b>Create individual IAM users</b> </p></li>
 <p>Since you don't want to share your AWS account root user credentials or use it to access to AWS, you can create users to distribute your resources instead, and you would want to create a user for yourself too (giving yourself administrative permissions, and use your user to do all your work). AWS allows you to specify unique sets of security credentials and permissions for each user, including the ability to revoke or modify them anytime necessary. This lets you, the owner, have more control over handling your system. </p>
 
-<ul><p><b>Use groups to assign permissions to IAM users</b> </p></ul>
+<li><p><b>Use groups to assign permissions to IAM users</b> </p></li>
 <p>By default, all users are set without permissions, and there is no default group that all users are placed in. It is far more convenient to create a group with a defined set of permissions catering to job-related functions and place each newly created user into the correct group. Every user placed into those groups will inherit the permissions of the group.</p>
 
-<ul><p><b>Grant least privilege</b> </p></ul>
+<li><p><b>Grant least privilege</b> </p></li>
 <p>When you are creating IAM policies, granting least privilege refers to granting only the permissions required to perform a task. This way, users will not be given too much capabilities within your infrastructure to run amok and mess around with other tools or resources unrelated to what they need. </p>
 
-<ul><p><b>Get started using permissions with AWS managed policies</b> </p></ul>
+<li><p><b>Get started using permissions with AWS managed policies</b> </p></li>
 <p>Being able to provide employees with only permissions they need takes time and knowledge of IAM policies. Therefore, both the adminstrator and employees will need time to learn about what they want or need to use so they can make full use of IAM management. The AWS managed policies are preset in your account, readily available for use and they are maintained and updated by AWS. This is a great way to save time when creating the initial configurations to IAM management since you can adjust those policies later. </p>
 
-<ul><p><b>Use customer managed policies instead of inline policies</b> </p></ul>
+<li><p><b>Use customer managed policies instead of inline policies</b> </p></li>
 <p>It was recommended by AWS to use managed policies rather than inline policies. The main advantage of managed policies is that they can be viewed in one place inside the console. Inline policies only exist on an IAM identity. Thus, managed policies are separate from IAM resources which are capable of being attached to multiple identities. If you have inline policies, they can be converted into managed policies.</p>
 
-<ul><p><b>Use access levels to review IAM permissions</b> </p></ul>
+<li><p><b>Use access levels to review IAM permissions</b> </p></li>
 <p>Its important to frequently review and monitor your IAM policies, making sure that your policies are granting least privilege as stated above. Each service is categorized into one of five access levels based on what each action does: <code>List, Read, Write, Permissions Management, or Tagging</code>. The IAM console includes policy summary tables that describe the access level, resources, and conditions that are allowed or denied for each service in a policy. </p>
 
-<ul><p><b>Configure a strong password policy for your users</b> </p></ul>
+<li><p><b>Configure a strong password policy for your users</b> </p></li>
 <p>AWS allows you to create a custom password policy for your infrastructure. It is important to configure a regular rotation for changing their password and strong requirements for their password. This way, 3rd-party, malicious, and unauthorized users will have a harder time trying to access your resources. </p>
 
-<ul><p><b>Enable MFA</b> </p></ul>
+<li><p><b>Enable MFA</b> </p></li>
 <p>Multi-Factor authentication should be given to all users. MFA requires users to have a device that generates a response to an authentication challenge. Both user credentials and the device-generated response are required to complete the sign-in process. If any of the user's credentials have been compromised, MFA will grant that extra layer of protection since it is needed to sign in. </p>
 
-<ul><p><b>Use roles for applications that run on Amazon EC2 instances</b> </p></ul>
+<li><p><b>Use roles for applications that run on Amazon EC2 instances</b> </p></li>
 <p>A role is an entity that has its own set of permissions, but it is not a user or group. Roles also do not have their own permanent set of credentials the way IAM users do. On the other hand, for Amazon EC2, IAM dynamically provides temporary credentials for the EC2 instances, being automatically rotated for you. Since applications running on Amazon EC2 instances require credentials to access other AWS services, a role can be specified as a launch parameter. </p>
 
-<ul><p><b>Use roles to delegate permissions</b> </p></ul>
+<li><p><b>Use roles to delegate permissions</b> </p></li>
 <p>Instead of sharing security credentials between accounts to allow users from another AWS to access resources in your AWS account, IAM roles can be used since you can define a role that specifies what permissions you want IAM users from the other account to have. Therefore, you can also designate which AWS accounts have the IAM users that are allowed to assume the role. </p>
 
-<ul><p><b>Do not share access keys</b> </p></ul>
+<li><p><b>Do not share access keys</b> </p></li>
 <p>As stated early on, access keys provide programmatic access to AWS. Do not embed access keys within unencrypted code or share these security credentials between users in your AWS account. We do not want any unauthorized users to gain access to your AWS resources. </p>
 
-<ul><p><b>Rotate credentials regularly</b> </p></ul>
+<li><p><b>Rotate credentials regularly</b> </p></li>
 <p>Rotating your credentials includes your passwords and access keys to be changed frequently. By rotating credentials frequently, it will be harder for your password or access key to become compromised without your knowledge, and it will be harder for others to figure those credentials since they will always be different. </p>
 
-<ul><p><b>Remove unnecessary credentials</b> </p></ul>
+<li><p><b>Remove unnecessary credentials</b> </p></li>
 <p>Removing unnecessary information allows less entry points to becoming compromised. </p>
 
-<ul><p><b>Use policy conditions for extra security</b> </p></ul>
+<li><p><b>Use policy conditions for extra security</b> </p></li>
 <p>IAM policies define permissions for an action regardless of the method that you use to perform the operation. This is another means to grant extra security since you can impose your users to work alongside the policies to further ensure that they are only capable of performing their tasks. </p>
 
-<ul><p><b>Monitor activity in your AWS account</b> </p></ul>
+<li><p><b>Monitor activity in your AWS account</b></p></li>
 <p>In general, you should always log what happens within your account. You always want to be sure that nothing suspicious is happening without your knowledge. Therefore, AWS offers various logging tools like AWS Inspector to provide security. </p>
 
-</ol>
+</ul>
 
 
 </main>
