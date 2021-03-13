@@ -1,0 +1,63 @@
+---
+layout: post                         
+title: "2021/03/12 Blog 16"                                                
+date: 2021-03-12 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+</style>
+
+<body>
+<main role="main">
+<h2><strong>How to SSH to Connect to Ubuntu Remote Server</strong></h2>
+<p><b>What is SSH?</b> SSH stands for <b>Secure Socket Shell</b>, which is a protocol that allows users to connect securely to a remote computer or server using a text-based interface. Once a secure SSH connection has been established, the shell session will begin where users may manipulate the server by typing commands within the client on your own local computer. This is one of the most used protocols since we generally want to be as secure as possible especially when we remote into another computer. SSH utilizes port 22 and requires client authentication which means you must confirm your identity when logging in.</p>
+
+<p>SSH is quite similar to SSL since they are both public key infrastructure (PKI) based and both create encrypted communication channels. The main difference between these two is that SSL is designed for the transmission of information whereas SSH is designed to execute commands; hence, you generally use SSH when trying to log into a network remotely. </p>
+
+<p><a href="https://helloitskayc.github.io/senior-design/2020/09/26/blog-3.html" target="_blank">Click here to learn more about SSL!</a></p>
+
+<h2><strong>Prerequisites</strong></h2>
+<ol>
+<li><p>Create an Ubuntu Virtual Machine and proceed with setup.</p></li>
+<li><p>Inside the virtual machine's terminal (with NAT network connection), type the command <code>"sudo apt install openssh-server"</code></p></li>
+<li><p>Switch the VM back to Host-only adapter so that we do not have any unwanted connection.</p></li>
+</ol>
+
+<h2><strong>Creating User and SSH into Server</strong></h2>
+<ol>
+
+<li><p>You will want to create a user with the command <code>sudo useradd -m [username]</code>. The <code>-m</code> is used to create a home directory if it does not exist.</p></li> 
+<li><p>Once you have created the user, use <code>sudo passwd [username]</code> which will then prompt you to make a password for the designated user.</p></li>
+
+<li><p>For this user, we want to modify it so that /bin/bash is the user's new login shell with this command <code>sudo usermod --shell /bin/bash [user_name]</code> </p></li>
+
+<li><p>Run the command <code>service sshd start</code></p></li>
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/Creating%20User.bmp" alt="Creating User">
+
+<li><p>In your local machine terminal, you will use the command <code>ssh user_name@HOST_IP_ADDRESS</code> </p>
+<p>If your username on local machine matches the one on remote, you may type in <code>ssh HOST_IP_ADDRESS</code> </p>
+</li>
+<img src="https://raw.githubusercontent.com/helloitskayc/helloitskayc.github.io/main/docs/blogimages/SSH%20into%20Server.bmp" alt="SSH into Server" >
+
+</ol>
+
+<p>If you were able to successfully SSH into your remote host, you are now able to manage and control the machine using your local terminal.</p>
+
+</main>
+</body>
