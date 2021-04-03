@@ -1,0 +1,57 @@
+---
+layout: post                         
+title: "2021/04/02 Blog 18"                                                
+date: 2021-04-02 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+</style>
+
+<body>
+<main>
+<h2><strong>GitHub Branches</strong></h2>
+<p>When working on GitHub, there is a feature called Branching which is very reliable when it comes to working with version control systems. When you branch into other version control systems, they can be expensive in time and diskspace. Therefore, these branches are used for handling the various development processes of a project. One way to think of these branches is a snapshot of your changes. For example, when trying to add new features or fix bugs, regardless of size, you can create a new branch to capture and isolate those changes. This helps developers prevent unstable code becoming merged into the source code, allowing people to easily clean their mistakes before merging into the main branch.</p>
+
+<h2><strong>How do Branches Work?</strong></h2>
+<p>A branch is essentially an independent line of development. They serve as an abstraction for the edit, stage, and commit process. One way to interpret them is by treating them as a new working directory. New commits would be recorded in that current branch - causing a fork in the history of the project, not affecting the main branch's project history.</p>
+
+<p>Developers may build, list, rename, and delete branches with the <code>git branch</code> command. It doesn't allow you to switch between branches or reassemble a forked history afterwards. As a result, the git branch command is well integrated with the git checkout and git merge commands. Lastly, they are very cheap compared to other version control systems since they do not use much disk space as it is computationally easy to move between branches and easy to merge branches together. This is mainly due to the fact that they act as pointers or individual commits.</p>
+
+<h2><strong>git branch Commands</strong></h2>
+
+<pre>git branch</pre>
+<p>This command lists all branches within your git repository. </p>
+<pre>git branch [branchname]</pre>
+<p>This allows users to create a new branch with their specified name. </p>
+<pre>git branch -d [branchname]</pre>
+<p>Using <code>-d</code> allows users to delete the specified branch. It's the safer option since it prevents you from deleting the branch if it has unmerged changes</p>
+<pre>git branch -D [branchname]</pre>
+<p>Using <code>-D</code> allows users to force delete the specified branch regardless of it having unmerged changes. In other words, this is the command used for permanently deleting all commits associated to this line of development.</p>
+
+<h2><strong>git checkout Commands</strong></h2>
+<p><code>Git checkout</code> allows you work hand-in-hand with <code>git branch</code>. This command allows users to switch between branches or restore working tree files. The git checkout command functions on three entities: files, commits, and branches. While it is similar to checking out old commits and files in the sense that the working directory is updated to match the selected branch and revision, but new changes are saved in the project history. </p>
+
+<pre>git checkout</pre>
+<p>The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch.</p>
+
+<pre>git checkout -b</pre>
+<p>The <code>-b</code> option works like git branch where it will create a new branch. Additionally, it will immediately switch you into that new branch too. Therefore, as a developer, this allows you to work on multiple features within a single repository by switching between them with git checkout.</p>
+
+</main>
+</body>
