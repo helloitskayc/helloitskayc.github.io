@@ -1,0 +1,42 @@
+---
+layout: post                         
+title: "2021/04/09 Blog 19"                                                
+date: 2021-04-09 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+</style>
+
+<body>
+<main>
+
+<h2><strong>What are LAMP Stacks?</strong></h2>
+
+<p>A LAMP stack has a wide range of capabilities that it may be used for since it is a set of open source software that is used for web application development. <b>LAMP</b> is an acronym for the following programs: <b>[L]</b>inux operating system, <b>[A]</b>pache HTTP Server, <b>[M]</b>ySQL database management system, and <b>[P]</b>HP programming language. A <b>stack</b> refers to the collection of these different software programs that stack together to create the necessary platform to support application software. When the differnt programs work in conjunction, they allow developers to create a database-driven and dynamic website. </p>
+
+<p>There are many advantages to using a LAMP stack. The LAMP stack is primarily composed of free, open-source software which allows it to be available for anyone to download and use. This also effectively makes the cost of development cheaper when developing their websites. Furthermore, due to the fact that it is open source, the source code is shared and avaialble for anyone to make changes and improvements to its overall performance. Therefore, for being a highly community-driven, there are many contributions made to improve its overall stability.</p>
+
+<h2><strong>Linux</strong></h2>
+
+<p>Linux is the main component of a LAMP stack as it is the operating system which other programs operate on. While the other components of a LAMP stack can function on different operating systems, Linux is the most popular one for web development not just because it is open-source, but rather, it is extremely flexible, customizable, and easy to use. PHP and MySQL work better on Linux. </p>
+
+<h2><strong>Apache</strong></h2>
+
+<p>Apache HTTP Server is a free, open-source web server that runs on the Linux operating system. While Linux is the operating system which handles the operations of the applications, Apache is the web server that processes requests and serves web assets and content through HTTP. Since Apache is considered an open source software, its original source code is freely available for developers to view and collaborate. Developers may build and configure their own modules to apply specific functionalities that improves its core features; therefore, making Apache a very reliable tool to develop with at a lower cost and greater performance. </p>
+
+<p>The way Apache functions is to communicate over networks from client to server using the TCP/IP protocol. Apache could be used with a variety of protocols, but the most common is HTTP/S. By default, Apache listens to the IP addresses configured in its configuration files that are being requested. These configuration files are modules that are used to control the way the Apache server behaves. </p>
+
+<h2><strong>MySQL</strong></h2>
+
+<p>MySQL supports SQL and relational tables, making it easier to establish dynamic databases. For example, you would use MySQL when you need to change website content often, have a lot of user-contributed content, rely on user feedback, or have plenty of content that requires storage and easy retrieval. Another database that is compatible with MySQL is MariaDB, allowing users to easily transfer their databases between the different structures without much risk. There are many advantages of MySQL such as having data security, on-demand scalability, high performance, and more. </p>
+
+<h2><strong>PHP</strong></h2>
+
+<p>PHP is a programming language that combines all of the components of the LAMP stack and allows the website or web application to run efficiently. When a visitor opens a website, the server processes the PHP commands and sends the results to the visitor's browser. The reason why it is commonly used for web development is due to the fact that it is a dynamically typed language, making it fast and easy to work with. </p>
+
+</main>
+</body>
+
