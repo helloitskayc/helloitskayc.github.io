@@ -1,0 +1,64 @@
+---
+layout: post                         
+title: "2021/04/16 Blog 20"                                                
+date: 2021-04-16 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+pre, code{
+    color: black;
+    background-color: #e6e6ff;
+    padding: 2px;
+    padding-right: 7px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+</style>
+
+<body>
+<main>
+
+<h2><strong>What is Terraform?</strong></h2>
+
+<p>There are many purposes in how people can use Terraform since it is a tool for building, changing, and versioning infrastructure as a code in a secure and efficient manner. It has capabilities to manage existing and popular service providers such as AWS. Terraform contains configuration files which describe components that are required to run applications or datacenters. A configuration can consist of multiple files and directories. Terraform creates an execution plan that describes what it would do to achieve the desired state, and then implements it to construct the infrastructure. Terraform can decide what changed and construct gradual execution plans that can be applied as the configuration changes. </p>
+
+<h2><strong>How does the Terraform Language work?</strong></h2>
+
+<p>The primary purpose of Terraform's language is to declare resources that represent infrastructure objects. All other language features in Terraform exist only to improve the flexibility and convenience of defining resources. Terraform's language is declarative, describing intended goals rather than the steps to reach those goals. The ordering of these blocks and the files they are organized into is not significant since Terraform only considers the relationships between resources when trying to determine an order of operations.</p>
+
+<p>Here are a few basic elements of the syntax for the Terraform language.</p>
+
+<pre>
+<BLOCK TYPE> "<BLOCK LABEL>" "<BLOCK LABEL>" {
+  # Block body
+  <IDENTIFIER> = <EXPRESSION> # Argument
+}
+</pre>
+
+<p><b>Blocks</b> are containers for various content that usually represent the configuration of objects such as the resources. Blocks have <b>block types</b> which can have zero or more labels, and have a body that may contain numerous arugments and nested blocks. </p>
+
+<p><b>Arguments</b> assign a value to a name, and they appear within these blocks</p>
+
+<p><b>Expressions</b> are used to represent a value, either literally or by referencing and combining other values. These appear as values for arguments, or within other expressions.</p>
+
+<h2><strong>Terraform Commands</strong></h2>
+<p>After building your infrastructure, there is a set of commands that can be used in the CLI to utilize Terraform.</p>
+
+<pre>Usage: terraform [global options] <subcommand> [args]</pre>
+
+<ol>
+<li><b>terraform init</b> prepares your working directory for other commands.</li>
+<li><b>terraform validate</b> checks whether the configuration is valid.</li>
+<li><b>terraform plan</b> shows the changes required by the current configuration.</li>
+<li><b>terraform apply</b> creates/launches or updates the infrastructure.</li>
+<li><b>terraform destroy</b> destroys the previously-created infrastructure, shutting it down.</li>
+</ol>
+
+</main>
+</body>
