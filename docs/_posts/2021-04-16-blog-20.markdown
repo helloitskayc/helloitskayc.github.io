@@ -35,9 +35,9 @@ pre, code{
 <p>Here are a few basic elements of the syntax for the Terraform language.</p>
 
 <pre>
-<BLOCK TYPE> "<BLOCK LABEL>" "<BLOCK LABEL>" {
+[BLOCK TYPE] "[BLOCK LABEL]" "[BLOCK LABEL]" {
   # Block body
-  <IDENTIFIER> = <EXPRESSION> # Argument
+  [IDENTIFIER] = [EXPRESSION] # Argument
 }
 </pre>
 
@@ -50,7 +50,7 @@ pre, code{
 <h2><strong>Terraform Commands</strong></h2>
 <p>After building your infrastructure, there is a set of commands that can be used in the CLI to utilize Terraform.</p>
 
-<pre>Usage: terraform [global options] <subcommand> [args]</pre>
+<pre>Usage: terraform [global options] [subcommand] [args]</pre>
 
 <ol>
 <li><b>terraform init</b> prepares your working directory for other commands.</li>
