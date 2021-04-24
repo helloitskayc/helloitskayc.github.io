@@ -1,0 +1,41 @@
+---
+layout: post                         
+title: "2021/04/23 Blog 21"                                                
+date: 2021-04-23 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+</style>
+
+<body>
+<main>
+
+<p>In my previous blog, I introduced <a href="https://helloitskayc.github.io/senior-design/2021/04/16/blog-20.html" target="_blank">Terraform and how the language works</a>. This week, I will talk about the benefits of terraform and why it might be more appealing to use over other tools such as Ansible.</p>
+
+<h2><strong>Benefits of Terraform</strong></h2>
+
+<p>Terraform is a very powerful tool that allows developers to create, update, and control version cloud infrastructures. The major benefits of Terraform include automated infrastructure management, lower deployment costs, and reduced provisioning time. Terraform is very unique in its own right in terms of managing hybrid cloud or multi-cloud infrastructures. The reason is that Terraform enables its developers to use the same tool and configuration file to manage the resources of the different cloud providers. </p>
+
+<h2><strong>Infrastructure-as-Code (IaC)</strong></h2>
+
+<p>One of the most important management and configuration approach of an infrastructure is known as <b>Infrastructure-as-Code (IaC)</b>. This means that infrastructure can be maintained like an application source code under the same version control. Engineers are able to maintain, review, test, modify, and reuse their infrastructure to test for various features or issues. Systems can be deployed, managed, and provisioned quickly, automatically, through this approach. </p>
+
+<p>The problems that IaC solves are <b>cost, scalability, availability, monitoring, and performance</b>. Since IT infrastructures have a history of manually configuring and managing the physical hardware and deploying the applications, this means that businesses need to hire many professional to perform those necessary tasks. Therefore, hiring various people of different professions will become costly since management will also accumulate those expenses. The main thing to scalability and availability comes down to speed. Manually configuring everything is an arduous process, causing applications to struggle with spikes and system administrators trying to set up ways to manage the workloads. IaC can configure the automation process, reducing the times of manually configuring everything. Lastly, by developing IaC improves the monitoring capability and performance since there are many tools that grant visibility to an entire infrastructure. It is easier to pinpoint the exact issues where things are likely to fail from humanistic errors - reducing the <b>inconsistency</b>.
+</p>
+
+<h2><strong>Terraform vs Ansible</strong></h2>
+
+<p>There are many similarities and dissimilarities amongst these tools since they are both used to help deploy code and infrastructure in repeatable environments that possess complex requirements. Terraform is better when it comes to the orchestration of how an infrastructure is managed whereas Ansible's strength lies in the configuration management of it.</p>
+
+<p>Terraform's current declarative model lacks certain functionality, which causes complexity when using it in certain ways. When Terraform is created as part of a strategy, it is powerless to carry out provisioners' actions. As a result, granting users access to their servers, downloading software, and issuing login credentials must all be organized in order for provisioners to operate properly. </p>
+
+<p>Ansible can provision cloud services, servers, hosts, and hypervisors with ease. It is widely regarded as the best method for processing pipelines.
+After completing the bootstrapping process, Ansible allows teams to link nodes to a load balancer, storage, operational tasks, or security, with Azure supporting the integration. Furthermore, Ansible provisioning enables users to reliably use the common automation language through orchestration, application deployment, and configuration management.</p>
+
+</main>
+</body>
