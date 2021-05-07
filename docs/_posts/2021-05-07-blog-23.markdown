@@ -1,0 +1,47 @@
+---
+layout: post                         
+title: "2021/05/07 Blog 23"                                                
+date: 2021-05-07 14:55:00 -0700
+categories: Senior-Design
+---
+
+<style>
+body{ background-color: #e6e6ff; }
+main { background-color: white; }
+a {color: blue; text-decoration:underline; }
+a:hover{ background-color: #e6e6ff; }
+</style>
+
+<body>
+<main>
+
+<h1><strong>What is Docker?</strong></h1>
+<p>Docker is an open platform that many use for developing, chipping, and running applications. Docker allows users to separate applications from their infrastructure so that they may deliver software quicker. Docker is able to manage the infrastructure in the same manner that applications are managed. Therefore, Docker allows developers to significantly reduce the delay of writing code and running it in production.</p>
+
+<p> Docker provides the ability to package and run application in a loosely isolated environment called a <b>container</b>. This isolation and security are meant to allow many containers to be ran simultaneously on a host. Containers are lightweight and hold everything required to run the application, so that users do not need to rely on what is installed on the host. Furthermore, containers are easily shareable; thus, allowing everyone to get the same container that they are going to work with.</p>
+
+<h1><strong>What is Docker used for?</strong></h1>
+<p>Docker is meant to streamline the development lifecycle by allowing developers to work in standardized environments with the use of containers to provide applications and services. In other words, containers are perfect for continuous integration and delivery workflows. Docker's container-based platform permits highly portable workloads too since they can run on a developer's local device, physical or virtual machines, cloud providers, or a mixture of these environments. </p>
+
+<p>With how lightwight and portable Docker is to use, it is very easy to dynamically manage workloads to scale applications and services as needed. Lastly, Docker is lightwight and fast, providing a viable, cost-effective alternative to hypervisor-based virtual machines. What this means is that developers can use more of their compute capacity to achieve business goals. Thus, docker is meant to handle high density environments and perfect for small and medium deployments where you need to perform greater tasks with less resources.</p>
+
+<p>After explaining what Docker is, let's talk about one of the tools that can be used with it.</p>
+
+<h1><strong>Docker Compose</strong></h1>
+<p>Docker has made it easier to set up local development environemnts; however, if you want to create more than one container for the application, several Docker files will be needed. This adds onto the load of maintaining them and may become very time-consuming. This is where Docker Compose comes in.</p>
+
+<p>Compose solves this problem as it is a tool that is used for defining and running multi-container Docker applications. You use a YAML file to configure your application's services. After setting up the YAML file, a single command will allow you to create and start all the services from those configurations. Docker Compose is great for development, testing, and staging environments, as well as continuous integration workflows.
+
+<h2><strong>Getting started with Docker Compose</strong></h2>
+<ol>
+<li>Install <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a> and <a href="https://docs.docker.com/engine/install/#server" target="_blank">Docker Engine</a>.</li>
+<li>Create a Directory for the Project</li>
+<li>Define the application services in docker-compose.yml</li>
+<li>Run docker-compose to start and run applications</li>
+</ol>
+
+<p>Click here to learn more about <a href="https://docs.docker.com/compose/gettingstarted/" target="_blank">Docker Compose</a></p>
+
+</main>
+</body>
+
