@@ -31,7 +31,7 @@ a:hover{ background-color: #e6e6ff; }
 <p>Docker has made it easier to set up local development environemnts; however, if you want to create more than one container for the application, several Docker files will be needed. This adds onto the load of maintaining them and may become very time-consuming. This is where Docker Compose comes in.</p>
 
 <p>Compose solves this problem as it is a tool that is used for defining and running multi-container Docker applications. You use a YAML file to configure your application's services. After setting up the YAML file, a single command will allow you to create and start all the services from those configurations. Docker Compose is great for development, testing, and staging environments, as well as continuous integration workflows.
-
+</p>
 <h2><strong>Getting started with Docker Compose</strong></h2>
 <ol>
 <li>Install <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a> and <a href="https://docs.docker.com/engine/install/#server" target="_blank">Docker Engine</a>.</li>
